@@ -1,0 +1,15 @@
+#ptpb-settings .widefat {
+  display: block;
+  margin-bottom: 5px;
+}
+#ptpb-settings .ptpb-setting-text {
+  width: 100%;
+  max-width: 320px;
+  margin: 0;
+}
+#ptpb-settings .description {
+  display: block;
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=settings.css.map */

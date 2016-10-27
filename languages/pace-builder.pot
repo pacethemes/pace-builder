@@ -1,0 +1,1218 @@
+# Copyright (C) 2016 Pace Themes
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Page Builder by PaceThemes 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pace-builder\n"
+"POT-Creation-Date: 2016-06-26 22:06:43+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+
+#: includes/class-pace-builder-column.php:22
+#: includes/class-pace-builder-section.php:36
+#: includes/modules/class-pace-builder-module-button.php:96
+msgid "Background Color"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:23
+msgid ""
+"Background Color for the column, leave it blank if you dont need a "
+"background color"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:27
+#: includes/class-pace-builder-column.php:45
+msgid "Column"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:28
+#: includes/class-pace-builder-form.php:68
+#: includes/class-pace-builder-row.php:71
+#: includes/class-pace-builder-section.php:52
+msgid "Admin Label"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:29
+#: includes/class-pace-builder-section.php:53
+msgid ""
+"Admin label for the section, this is the label/title you will see in the "
+"Pace Builder stage area, it lets you name your section and helps keep track "
+"of them"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:54
+msgid "Add Module"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:61
+msgid "Edit Column"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:70
+msgid "Column Settings"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:73
+#: includes/class-pace-builder-row.php:120
+#: includes/class-pace-builder-section.php:106
+#: includes/modules/class-pace-builder-module.php:150
+msgid "Style Settings"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:76
+#: includes/class-pace-builder-row.php:123
+#: includes/class-pace-builder-section.php:109
+#: includes/modules/class-pace-builder-module.php:153
+#: includes/templates/common.php:184
+msgid "Typography Settings"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:107
+#: includes/class-pace-builder-row.php:150
+#: includes/class-pace-builder-section.php:139
+#: includes/modules/class-pace-builder-module.php:76
+#: includes/modules/class-pace-builder-module.php:110
+#: includes/templates/common.php:77
+msgid "Save"
+msgstr ""
+
+#: includes/class-pace-builder-column.php:108
+#: includes/class-pace-builder-row.php:151
+#: includes/class-pace-builder-section.php:140
+#: includes/modules/class-pace-builder-module.php:77
+#: includes/modules/class-pace-builder-module.php:111
+msgid "Close"
+msgstr ""
+
+#: includes/class-pace-builder-fonts.php:19
+msgid "Inherit"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:22
+#: includes/class-pace-builder-row.php:20
+#: includes/modules/class-pace-builder-module-button.php:62
+#: includes/modules/class-pace-builder-module-gallery.php:65
+#: includes/modules/class-pace-builder-module-image.php:71
+#: includes/modules/class-pace-builder-module.php:33
+msgid "Yes"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:23
+#: includes/class-pace-builder-row.php:21
+#: includes/modules/class-pace-builder-module-button.php:63
+#: includes/modules/class-pace-builder-module-gallery.php:66
+#: includes/modules/class-pace-builder-module-image.php:72
+#: includes/modules/class-pace-builder-module.php:34
+msgid "No"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:40
+msgid "Page Layout"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:41
+msgid ""
+"Default - Page Builder content will be displayed inside the Active Theme's "
+"layout. None - Blank Layout will be used, you have to create the headers, "
+"menu and footers as Page Builder Sections"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:43
+#: includes/class-pace-builder-row.php:30
+#: includes/class-pace-builder-row.php:46
+msgid "Default"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:44
+#: includes/class-pace-builder-row.php:57
+msgid "None"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:50
+msgid "Force Full Width"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:51
+msgid ""
+"Do you want to force the Page Builder content to be Full Width of the "
+"browser view port ?"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:62
+msgid "CSS3 Animation"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:63
+msgid "CSS Animation for the Module"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:69
+msgid ""
+"Admin label for the module, this is the label/title you will see in the "
+"Pace Builder stage area, it lets you name your module and helps keep track "
+"of them"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:73
+msgid "CSS Class(es)"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:74
+msgid ""
+"Additional CSS classes, this will help you set custom styling. You can "
+"enter multiple classes by seperating them with spaces"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:78
+msgid "Margin Bottom"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:79
+msgid ""
+"Margin (Spacing) at the Bottom for this Module (Padding is space inside the "
+"module, Margin is space outside the module)"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:87
+msgid "Padding Top"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:88
+msgid "Padding (Spacing) at the top"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:96
+msgid "Padding Bottom"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:97
+msgid "Padding (Spacing) at the bottom"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:105
+msgid "Padding Left"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:106
+msgid "Padding (Spacing) at the left side"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:114
+msgid "Padding Right"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:115
+msgid "Padding (Spacing) at the right side"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:123
+msgid "Border Top Width"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:131
+msgid "Border Bottom Width"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:139
+msgid "Border Left Width"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:147
+msgid "Border Right Width"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:155
+msgid "Border Top Color"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:159
+msgid "Border Bottom Color"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:163
+msgid "Border Left Color"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:168
+msgid "Border Right Color"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:176
+#: includes/class-pace-builder-form.php:223
+#: includes/modules/class-pace-builder-module-button.php:101
+msgid "Text Color"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:180
+#: includes/class-pace-builder-form.php:227
+msgid "Font Family"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:181
+#: includes/class-pace-builder-form.php:228
+msgid "If Set to Inherit all Font Options except Text Color will be ignored."
+msgstr ""
+
+#: includes/class-pace-builder-form.php:185
+#: includes/class-pace-builder-form.php:232
+msgid "Font Variant"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:190
+#: includes/class-pace-builder-form.php:237
+msgid "Font Size (px)"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:191
+msgid ""
+"This is the size for H1, font sizes for H2 to H6 are calculated based on "
+"this size."
+msgstr ""
+
+#: includes/class-pace-builder-form.php:199
+#: includes/class-pace-builder-form.php:245
+msgid "Line Height (em)"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:207
+#: includes/class-pace-builder-form.php:253
+msgid "Letter Spacing  (px)"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:215
+#: includes/class-pace-builder-form.php:261
+msgid "Word Spacing (px)"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:317
+#: includes/modules/class-pace-builder-module-featurebox.php:37
+#: includes/modules/class-pace-builder-module-hovericon.php:37
+msgid "Select Icon"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:325
+#: includes/modules/class-pace-builder-module-image.php:37
+msgid "Select Image"
+msgstr ""
+
+#: includes/class-pace-builder-form.php:325
+msgid "Remove"
+msgstr ""
+
+#: includes/class-pace-builder-icons.php:16
+msgid "Font Awesome"
+msgstr ""
+
+#: includes/class-pace-builder-icons.php:17
+msgid "Dashicons"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:27
+#: includes/class-pace-builder-section.php:42
+msgid "Content Type"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:28
+msgid ""
+"Default - Inherits Section \"Content Type\" setting. Boxed - Row content "
+"will be fixed to 1170px or corresponding device width. Fluid - Row content "
+"will be 100% width to the browser width"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:31
+#: includes/class-pace-builder-section.php:46
+msgid "Boxed"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:32
+#: includes/class-pace-builder-section.php:45
+msgid "Fluid"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:37
+msgid "Space Between Columns"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:38
+msgid "Show Space/Padding between Columns ?"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:43
+msgid "Columns Vertical Alignment"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:44
+msgid "Vertical Alignment of the columns"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:47
+msgid "Top"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:48
+msgid "Middle"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:49
+msgid "Bottom"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:54
+msgid "Force Column Edge"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:55
+msgid ""
+"Do you want to force/push a column in this row to the edge of viewport ? If "
+"yes select the left or right column. Use this option only if the row has 2 "
+"columns."
+msgstr ""
+
+#: includes/class-pace-builder-row.php:58
+#: includes/modules/class-pace-builder-module-button.php:51
+#: includes/modules/class-pace-builder-module-image.php:46
+#: includes/modules/class-pace-builder-module-menu.php:44
+msgid "Left"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:59
+#: includes/modules/class-pace-builder-module-button.php:53
+#: includes/modules/class-pace-builder-module-image.php:48
+#: includes/modules/class-pace-builder-module-menu.php:46
+msgid "Right"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:64
+msgid "Sequential Module Animations"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:65
+msgid "Should all the modules in this row animate sequentially ?"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:70
+msgid "Row"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:72
+msgid ""
+"Admin label for the row, this is the label/title you will see in the Pace "
+"Builder stage area, it lets you name your row and helps keep track of them"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:89
+msgid "Column Layout"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:91
+#: includes/class-pace-builder-row.php:117
+msgid "Row Settings"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:93
+msgid "Clone Row"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:95
+msgid "Delete Row"
+msgstr ""
+
+#: includes/class-pace-builder-row.php:108
+msgid "Edit Row"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:22
+msgid "Background Image"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:23
+msgid ""
+"If set, this image will be used as the background for this section. To "
+"remove the image, simply delete the URL from the settings field."
+msgstr ""
+
+#: includes/class-pace-builder-section.php:27
+msgid "Background Image Attachment"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:28
+msgid ""
+"Scroll - The background scrolls along with the element. Fixed - The "
+"background is fixed with regard to the viewport"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:30
+msgid "Fixed"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:31
+msgid "Scroll"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:37
+msgid "Background Color for the section, leave it blank to set a transparent color"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:43
+msgid ""
+"Boxed - Section content will be fixed to 1170px or corresponding device "
+"width. Fluid - Section content will be 100% width to the browser width"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:51
+msgid "Section"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:72
+#: includes/class-pace-builder-section.php:103
+msgid "Section Settings"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:74
+msgid "Clone Section"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:75
+msgid "Delete Section"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:78 includes/templates/common.php:12
+msgid "Click to toggle"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:86
+msgid "Add Row"
+msgstr ""
+
+#: includes/class-pace-builder-section.php:95
+msgid "Edit Section"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:52
+#: includes/class-pace-builder-stage.php:84
+#: includes/class-pace-builder-stage.php:176
+msgid "Pace Builder"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:171
+msgid "Pace Builder layouts"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:172
+msgid "Error uploading or importing file."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:175
+msgid ""
+"Would you like to clear Pace Builder content and revert to using the "
+"default visual editor ?"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:177
+msgid "Default Editor"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:178
+msgid "Are you sure you want to delete this Section ? This step cannot be undone."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:179
+msgid "Are you sure you want to delete this Row ? This step cannot be undone."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:180
+msgid "Are you sure you want to delete this Slide ? This step cannot be undone."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:181
+msgid "Are you sure you want to delete this Image ? This step cannot be undone."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:182
+msgid "Are you sure you want to delete this Module ? This step cannot be undone."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:183
+msgid ""
+"You are about to resize the columns to a lower size than the existing "
+"columns, it may remove the last columns and will result in data/module "
+"loss. Do you really want to do this ?"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:184
+msgid "Module Style Options"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:185
+msgid "Widget Style Options"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:186 includes/templates/common.php:34
+msgid "Full Screen Mode"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:187
+msgid "Exit Full Screen"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:188
+msgid "Please enter a layout name."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:189
+msgid ""
+"Looks like you are trying to save an empty layout, add some elements before "
+"saving the layout."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:190
+msgid "You do not have any layouts saved to the Database."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:191
+msgid "Are you sure you want to delete this layout from the Database ?"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:192
+msgid "Are you sure you want to replace the current layout with this layout ?"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:193
+msgid "Are you sure you want to clear/remove the current layout ?"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:194
+msgid "An error occured while fetching layouts"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:214
+msgid "Untitled Widget"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:350
+msgid "Add Section"
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:571
+msgid "Layout saved to the database successfully."
+msgstr ""
+
+#: includes/class-pace-builder-stage.php:593
+msgid "Layout deleted from Database."
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:25
+msgid "Button"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:26
+msgid "Simple yet customizable button"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:38
+#: includes/modules/class-pace-builder-module-gallery.php:84
+msgid "Link"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:39
+msgid "Link the button should point to."
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:43
+#: includes/modules/class-pace-builder-module-featurebox.php:64
+#: includes/modules/class-pace-builder-module-text.php:25
+msgid "Text"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:44
+msgid "Text for the button"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:49
+#: includes/modules/class-pace-builder-module-image.php:43
+#: includes/modules/class-pace-builder-module-menu.php:42
+msgid "Alignment"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:52
+#: includes/modules/class-pace-builder-module-image.php:47
+#: includes/modules/class-pace-builder-module-menu.php:45
+msgid "Center"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:59
+#: includes/modules/class-pace-builder-module-image.php:68
+msgid "URL should open in New Tab ?"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:60
+#: includes/modules/class-pace-builder-module-image.php:69
+msgid "Should the URL open in a new tab or the same tab ?"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:69
+msgid "Size"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:71
+#: includes/modules/class-pace-builder-module-button.php:88
+msgid "Normal"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:72
+msgid "Small"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:73
+msgid "Big"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:79
+msgid "Button should have Rounded edges ?"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:85
+msgid "Style"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:86
+msgid ""
+"Normal will let you choose the button colors, If Light or Dark is selected, "
+"then respective colors will be applied and the below color options will be "
+"ignored."
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:89
+msgid "Light"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:90
+msgid "Dark"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:106
+msgid "Background Color on Hover"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-button.php:111
+msgid "Text Color on Hover"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-contactform7.php:28
+msgid "Contact Form 7"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-contactform7.php:29
+msgid "Form created with Contact Form 7 Plugin"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-contactform7.php:48
+msgid "Select Form"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-contactform7.php:53
+#: includes/modules/class-pace-builder-module-featurebox.php:59
+#: includes/modules/class-pace-builder-module-gallery.php:89
+#: includes/modules/class-pace-builder-module-image.php:58
+msgid "Title"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-contactform7.php:66
+msgid "Form ID"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:25
+msgid "Feature Box"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:26
+msgid "An Icon Box with a Title and Description"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:42
+#: includes/modules/class-pace-builder-module-hovericon.php:42
+#: includes/modules/class-pace-builder-module-styledlist.php:42
+msgid "Icon Size"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:54
+#: includes/modules/class-pace-builder-module-hovericon.php:66
+#: includes/modules/class-pace-builder-module-styledlist.php:83
+msgid "Icon Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:55
+#: includes/modules/class-pace-builder-module-hovericon.php:67
+msgid "Color of the Icon, this will be Icon color and the Border color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:60
+#: includes/modules/class-pace-builder-module-hovericon.php:78
+msgid "This will be the heading/title below the Icon"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-featurebox.php:65
+#: includes/modules/class-pace-builder-module-hovericon.php:83
+msgid "This will be the text below the Icon Title"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:25
+msgid "Gallery"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:26
+msgid "An Image Gallery"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:28
+#: includes/modules/class-pace-builder-module-gallery.php:80
+#: includes/modules/class-pace-builder-module-image.php:25
+msgid "Image"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:40
+msgid "Thumbnails Shape"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:41
+msgid "Do you want Rounded or Square Thumbnails ?"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:43
+msgid "Round"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:44
+msgid "Square"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:50
+msgid "Columns"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:51
+msgid "Number of columns"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:53
+msgid "Three"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:54
+msgid "Four"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:55
+msgid "Five"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:56
+msgid "Six"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:62
+msgid "Padding/Spacing"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:63
+msgid "Do you want to show spacing between the images ?"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:85
+msgid ""
+"Link the image should be pointing to, leave it blank to open the image in a "
+"Lightbox"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:90
+msgid "This will be the heading/title below the Image thumbnail"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:94
+msgid "Description"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-gallery.php:95
+msgid "This will be the text below the Image in the lightbox/colorbox preview"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:25
+msgid "Hover Icon"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:26
+msgid "An Icon with a Title, Description and a cool CSS3 Hover Effect"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:53
+msgid "Icon Hover Effect"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:54
+msgid "Icon Effect when hovered"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:56
+msgid "Slide From Left"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:57
+msgid "Slide From Right"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:58
+msgid "Slide From Top"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:59
+msgid "Slide From Bottom"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:60
+msgid "Rotate"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:72
+msgid "Hover Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:73
+msgid ""
+"Background Color of the Icon, when a user hovers on the Icon the Color and "
+"Hover Color will be swapped"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:77
+msgid "Icon Title"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:82
+msgid "Icon Text"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:87
+msgid "Icon Link"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-hovericon.php:88
+msgid "This is the link the Icon will be pointing to"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:26
+msgid "Simple Image with optional lightbox"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:38
+msgid "Select the Image you want to insert."
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:44
+msgid "Alignment of the image"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:53
+msgid "Alt"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:54
+msgid "HTML alt attribute for the image"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:59
+msgid "HTML title attribute for the image"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:63
+msgid "URL / Hyperlink"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:64
+msgid ""
+"If set the image will be wrapped inside an anchor tag which will be opened "
+"if the user clicks on the image"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:78
+msgid "Image Lightbox"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-image.php:79
+msgid ""
+"Do you want to show a lightbox for the image ? If set to yes it will "
+"override the URL and the image will be displayed in a lightbox when the "
+"image is clicked"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:25
+msgid "Menu"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:26
+msgid "A registered WordPress Menu"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:37
+msgid "Select Menu"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:52
+msgid "Menu Item Text Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:57
+msgid "Menu Item Text Hover Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:62
+msgid "Sub Menu Background Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:67
+msgid "Sub Menu Border Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:72
+msgid "Sub Menu Item Text Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:77
+msgid "Sub Menu Item Text Hover Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:82
+msgid "Sub Menu Item Text Hover Background Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-menu.php:95
+msgid "Menu ID"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:25
+msgid "Styled List"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:26
+msgid "An Unordered List with Icons"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:30
+msgid "Item"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:51
+msgid "Icon Spacing"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:60
+msgid "Item Margin Botton"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:78
+msgid "Icon"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:88
+msgid "Icon Background Color"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:93
+#: includes/modules/class-pace-builder-module-text.php:37
+msgid "Content"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-styledlist.php:94
+msgid "This will be the List Item Content"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-text.php:26
+msgid "A rich-text tinymce Text editor"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module-widget.php:27
+#: includes/modules/class-pace-builder-module-widget.php:28
+msgid "Widget"
+msgstr ""
+
+#: includes/modules/class-pace-builder-module.php:67
+#: includes/modules/class-pace-builder-module.php:103
+msgid "Edit "
+msgstr ""
+
+#: includes/modules/class-pace-builder-module.php:133
+msgid "Add "
+msgstr ""
+
+#: includes/modules/class-pace-builder-module.php:147
+msgid "Module Settings"
+msgstr ""
+
+#: includes/templates/common.php:5
+msgid "Edit Module"
+msgstr ""
+
+#: includes/templates/common.php:6
+msgid "Clone Module"
+msgstr ""
+
+#: includes/templates/common.php:8
+msgid "Delete Module"
+msgstr ""
+
+#: includes/templates/common.php:22
+msgid "Edit"
+msgstr ""
+
+#: includes/templates/common.php:23
+msgid "Clone"
+msgstr ""
+
+#: includes/templates/common.php:24 includes/templates/common.php:161
+msgid "Delete"
+msgstr ""
+
+#: includes/templates/common.php:31
+msgid "Layout Manager"
+msgstr ""
+
+#: includes/templates/common.php:32
+msgid "Clear Layout"
+msgstr ""
+
+#: includes/templates/common.php:33 includes/templates/common.php:172
+msgid "Page Options"
+msgstr ""
+
+#: includes/templates/common.php:40
+msgid "Insert"
+msgstr ""
+
+#: includes/templates/common.php:42
+msgid "Append"
+msgstr ""
+
+#: includes/templates/common.php:43
+msgid "Prepend"
+msgstr ""
+
+#: includes/templates/common.php:44
+msgid "Replace"
+msgstr ""
+
+#: includes/templates/common.php:51
+msgid "Manage Layouts"
+msgstr ""
+
+#: includes/templates/common.php:58 includes/templates/common.php:68
+msgid "Prebuilt"
+msgstr ""
+
+#: includes/templates/common.php:60
+msgid "Load from DB"
+msgstr ""
+
+#: includes/templates/common.php:61
+msgid "Save to DB"
+msgstr ""
+
+#: includes/templates/common.php:62
+msgid "Import"
+msgstr ""
+
+#: includes/templates/common.php:63
+msgid "Export"
+msgstr ""
+
+#: includes/templates/common.php:75
+msgid "Layout Name"
+msgstr ""
+
+#: includes/templates/common.php:85
+msgid "Drop import file here"
+msgstr ""
+
+#: includes/templates/common.php:87
+msgid "OR"
+msgstr ""
+
+#: includes/templates/common.php:91
+msgid "Select Import File"
+msgstr ""
+
+#: includes/templates/common.php:111
+msgid "Download Layout"
+msgstr ""
+
+#: includes/templates/common.php:146
+msgid "Preview"
+msgstr ""
+
+#: includes/templates/common.php:181
+msgid "Layout Settings"
+msgstr ""
+
+#: includes/templates/common.php:211
+msgid "Select Column Layout"
+msgstr ""
+
+#: includes/templates/common.php:247
+msgid "Select Module"
+msgstr ""
+
+#: includes/templates/common.php:254
+msgid "All"
+msgstr ""
+
+#: includes/templates/common.php:257
+msgid "Modules"
+msgstr ""
+
+#: includes/templates/common.php:260
+msgid "WP Widgets"
+msgstr ""
+
+#: includes/templates/common.php:300
+msgid "Missing Module"
+msgstr ""
+
+#: includes/templates/common.php:306
+msgid "Select an Icon"
+msgstr ""
+
+#: includes/templates/fonts.php:2
+msgid "Enabled"
+msgstr ""
+
+#: includes/templates/fonts.php:11
+msgid ""
+"Enable or disable typography settings for this element and it's children. "
+"If disabled typography settings will be applied from parent"
+msgstr ""
+
+#: includes/templates/fonts.php:15
+msgid "Title / Heading"
+msgstr ""
+
+#: includes/templates/fonts.php:24
+msgid "Text / Content"
+msgstr ""
+
+#: pace-builder.php:89 pace-builder.php:97
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Page Builder by PaceThemes"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://pacethemes.com/pace-builder"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Drag and Drop Page Builder, build anything you need."
+msgstr ""
