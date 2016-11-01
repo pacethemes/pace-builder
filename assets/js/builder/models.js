@@ -367,11 +367,12 @@ ptPbApp.Models = ptPbApp.Models || {};
         },
 
         parse: function (response) {
-            var module = this;
+            var module = this,
+                typ = module.get('item');
             this.itemNum = 1;
             if (_.has(response, "items")) {
                 response.items = response.items.map(function (item) {
-                    return _.extend({}, module.getItemDefaults(item.type), item, {id: module.getItemId(response.id)});
+                    return _.extend({}, module.getItemDefaults(typ), item, {id: module.getItemId(response.id), type: typ});
                 });
                 this.items = new ptPbApp.Collections.Item(response.items, {
                     parent: this
