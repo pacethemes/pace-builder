@@ -136,8 +136,9 @@ class PTPB_Stage extends PTPB_Singleton {
 				wp_enqueue_script( 'pb-rangeslider', PTPB()->plugin_url() . '/assets/plugins/ion-rangeslider/js/ion.rangeSlider.js' );
 				wp_enqueue_script( 'wp-color-picker-alpha', PTPB()->plugin_url() . '/assets/plugins/wp-color-picker-alpha/wp-color-picker-alpha.min.js', array( 'wp-color-picker' ), PTPB()->version, true );
 				wp_enqueue_script( 'jquery-chosen', PTPB()->plugin_url() . '/assets/plugins/chosen/chosen.jquery.min.js', array( 'jquery' ), PTPB()->version, true );
-				wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?libraries=places', array( ), PTPB()->version, true );
+				wp_enqueue_script( 'google-maps', $this->google_maps_url(), array( ), PTPB()->version, true );
 				wp_enqueue_script( 'mapsed', PTPB()->plugin_url() . '/assets/plugins/mapsed/mapsed.min.js', array( 'google-maps' ), PTPB()->version, true );
+
 				wp_enqueue_script( 'ptpb_util_js', PTPB()->plugin_url() . '/assets/js/builder/util.js', array(), PTPB()->version, true );
 				wp_enqueue_script( 'ptpb_models_js', PTPB()->plugin_url() . '/assets/js/builder/models.js', array( 'ptpb_util_js' ), PTPB()->version, true );
 				wp_enqueue_script( 'ptpb_collections_js', PTPB()->plugin_url() . '/assets/js/builder/collections.js', array( 'ptpb_models_js' ), PTPB()->version, true );
@@ -145,6 +146,8 @@ class PTPB_Stage extends PTPB_Singleton {
 				wp_enqueue_script( 'ptpb_admin_js', PTPB()->plugin_url() . '/assets/js/builder/app.js', array( 'ptpb_collections_js', 'ptpb_views_js' ), PTPB()->version, true );
 			} else {
 				$required = array( 'jquery', 'jquery-ui-core', 'jquery-ui-slider', 'jquery-ui-datepicker', 'jquery-ui-draggable', 'jquery-ui-droppable', 'imagesloaded', 'jquery-masonry', 'underscore', 'backbone', 'wp-color-picker' );
+				wp_enqueue_script( 'google-maps', $this->google_maps_url(), array( ), PTPB()->version, true );
+
 				wp_enqueue_script( 'ptpb_plugins', PTPB()->plugin_url() . '/assets/js/admin-plugins.min.js', $required, PTPB()->version, true );
 				wp_enqueue_script( 'ptpb_admin_js', PTPB()->plugin_url() . '/assets/js/admin-builder.min.js', array( 'ptpb_plugins' ),PTPB()->version, true );
 			}			
@@ -152,7 +155,7 @@ class PTPB_Stage extends PTPB_Singleton {
 			wp_localize_script( 'ptpb_admin_js', 'ptPbOptions',
 				array(
 					'ajaxurl'     => wp_nonce_url( admin_url( 'admin-ajax.php' ), 'ptpb_action', '_ptpb_nonce' ),
-					'isPb'       => ptpb_is_pb(),
+					'isPb'        => ptpb_is_pb(),
 					'data'        => ptpb_get_data(),
 					'pageOptions' => ptpb_get_page_options(),
 					'widgets'     => $this->get_widgets(),
@@ -194,6 +197,22 @@ class PTPB_Stage extends PTPB_Singleton {
 			);
 
 		}
+	}
+
+	/**
+	 * URL for Google Maps
+	 * @return string
+	 */
+	private function google_maps_url() {
+
+		$instance = ptpb_get_module_instance( 'PTPB_Module_GoogleMap' );
+
+		if( ! $instance ) {
+			return '//maps.googleapis.com/maps/api/js?libraries=places';
+		}
+
+		return $instance->maps_url();
+
 	}
 
 	/**

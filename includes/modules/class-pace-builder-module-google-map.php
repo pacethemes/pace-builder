@@ -29,11 +29,26 @@ if ( ! class_exists( 'PTPB_Module_GoogleMap' ) ) :
 			$this->description = __( 'An interactive Google map', 'pace-builder' );
 			$this->scripts 	   = array(
 									'ptpb_base64'		=> PTPB()->plugin_url() . '/assets/plugins/base64/jquery.base64.js',
-									'ptpb_google-maps'  => '//maps.googleapis.com/maps/api/js?libraries=places',
+									'ptpb_google-maps'  => $this->maps_url(),
 									'ptpb_mapsed'	  	=> PTPB()->plugin_url() . '/assets/plugins/mapsed/mapsed.min.js'
 								);
 
 			add_action( 'ptpb_module_googlemap_after_js_templates', array( $this, 'points_template' ), 10 );
+		}
+
+		/**
+		 * URL for Google Maps, include an API Key if it's set
+		 * @return string
+		 */
+		public function maps_url() {
+			$url 	 = '//maps.googleapis.com/maps/api/js?libraries=places';
+			$api_key = ptpb_get_setting( 'gmaps_api_key'  );
+
+			if( ! empty( $api_key ) ) {
+				$url = add_query_arg( 'key', $api_key, $url );
+			}
+
+			return $url;
 		}
 
 		/**

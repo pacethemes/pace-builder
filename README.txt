@@ -4,7 +4,7 @@ Donate link: http://pacethemes.com
 Tags: pace builder, page builder, composer, visual builder, responsive, widget, widgets, builder, page, admin, gallery, content, cms, pages, post, css, layout, grid
 Requires at least: 4.0
 Tested up to: 4.6.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ We've tried to ensure that Pace Builder is compatible with most plugin widgets. 
 6. Prebuilt Layouts
 
 == Changelog ==
+
+= 1.1.2 =
+* Fixes Google Map API key issue
 
 = 1.1.1 =
 * Fixes Layout Import Page Options option
