@@ -76,7 +76,7 @@ class PTPB_Public {
 	 */
 	public function body_classes( $classes ) {
 		if( ! ptpb_is_pb() ) {
-			return;
+			return $classes;
 		}
 
 		if ( ptpb_get_layout() === 'default' && ptpb_is_fullwidth_page() ) {

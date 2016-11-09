@@ -24,7 +24,7 @@ class PTPB_Section extends PTPB_Singleton {
 			),
 			'bg_parallax'     => array(
 				'type'  => 'select',
-				'default' => 'yes',
+				'default' => 'no',
 				'label' => __( 'Background Image Parallax Effect', 'pace-builder' ),
 				'desc'  => __( 'If this is enabled, it will override "Background Image Attachment" setting.', 'pace-builder' ),
 				'options' => array(
