@@ -1215,7 +1215,7 @@ img {
 }
 
 /* Contact Form 7 */
-.ptpb-cf7 .wpcf7-form-control {
+.ptpb-cf7:not(.theme-none) .wpcf7-form-control {
   border-radius: 0;
   border: 1px solid #e5e5e5;
   padding: 0px 10px !important;
@@ -1230,25 +1230,25 @@ img {
   transition: all 0.25s ease-in-out;
   background-color: #f5f5f5;
 }
-.ptpb-cf7 .wpcf7-form-control:focus {
+.ptpb-cf7:not(.theme-none) .wpcf7-form-control:focus {
   outline: none;
 }
-.ptpb-cf7 .wpcf7-form-control.wpcf7-not-valid {
+.ptpb-cf7:not(.theme-none) .wpcf7-form-control.wpcf7-not-valid {
   border-width: 2px !important;
   border-color: #D90429 !important;
   color: #D90429 !important;
 }
-.ptpb-cf7 textarea.wpcf7-textarea {
+.ptpb-cf7:not(.theme-none) textarea.wpcf7-textarea {
   min-height: 150px;
 }
-.ptpb-cf7 .ajax-loader {
+.ptpb-cf7:not(.theme-none) .ajax-loader {
   display: block;
   visibility: hidden;
 }
-.ptpb-cf7 .wpcf7-not-valid-tip {
+.ptpb-cf7:not(.theme-none) .wpcf7-not-valid-tip {
   display: none;
 }
-.ptpb-cf7 .wpcf7-validation-errors {
+.ptpb-cf7:not(.theme-none) .wpcf7-validation-errors {
   margin: 0;
   padding: 3px;
   background-color: #fcf8e3;
@@ -1256,14 +1256,14 @@ img {
   border: 2px solid #faebcc;
   font-size: 13px;
 }
-.ptpb-cf7 .wpcf7-mail-sent-ok {
+.ptpb-cf7:not(.theme-none) .wpcf7-mail-sent-ok {
   margin: 0;
   padding: 3px;
   border: 2px solid #d6e9c6;
   background-color: #dff0d8;
   color: #468847;
 }
-.ptpb-cf7 .wpcf7-submit {
+.ptpb-cf7:not(.theme-none) .wpcf7-submit {
   border: none;
   height: 40px;
   line-height: 40px;
@@ -1273,17 +1273,18 @@ img {
   text-transform: uppercase;
   opacity: 0.9;
 }
-.ptpb-cf7 .wpcf7-submit:focus {
+.ptpb-cf7:not(.theme-none) .wpcf7-submit:focus {
   outline: none;
   opacity: 1;
 }
-.ptpb-cf7 .wpcf7-submit:hover {
+.ptpb-cf7:not(.theme-none) .wpcf7-submit:hover {
   box-shadow: none;
   opacity: 1;
 }
-.ptpb-cf7 .ptpb-halves .wpcf7-submit, .ptpb-cf7 .ptpb-halves .wpcf7-form-control {
+.ptpb-cf7:not(.theme-none) .ptpb-halves .wpcf7-submit, .ptpb-cf7:not(.theme-none) .ptpb-halves .wpcf7-form-control {
   width: 50%;
 }
+
 .ptpb-cf7.theme-light .wpcf7-form-control {
   background-color: transparent !important;
   border-width: 1px;

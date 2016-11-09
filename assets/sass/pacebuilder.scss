@@ -1467,7 +1467,7 @@ img{
 }
 
 /* Contact Form 7 */
-.ptpb-cf7{
+.ptpb-cf7:not(.theme-none){
   .wpcf7-form-control {
     border-radius: 0;
     border: 1px solid #e5e5e5;
@@ -1540,6 +1540,9 @@ img{
       width: 50%;
     }
   }
+}
+
+.ptpb-cf7 {
   &.theme-light{
     .wpcf7-form-control {
       background-color: transparent !important;
