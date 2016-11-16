@@ -264,13 +264,13 @@ class PTPB_Form extends PTPB_Singleton {
 				'step'  => 0.1,
 				'unit'  => 'px'
 			),
-			'tss'                 => array(
+			'f_tss'                 => array(
 				'type'  => 'range-slider',
-				'label' => __( 'Screen Size', 'pace-builder' ),
+				'label' => __( 'Min and Max Screen Size', 'pace-builder' ),
 				'default' => '768;991',
 				// 'desc'  => __( 'This is the size for H1, font sizes for H2 to H6 are calculated based on this size.', 'pace-builder' ),
-				'max'   => 991,
-				'min'   => 768,
+				'max'   => 1170,
+				'min'   => 620,
 				'step'  => 1,
 				'unit'  => 'px'
 			),
@@ -288,6 +288,15 @@ class PTPB_Form extends PTPB_Singleton {
 				'label' => __( 'Text / Content Font Size (px)', 'pace-builder' ),
 				'max'   => 60,
 				'min'   => 8,
+				'step'  => 1,
+				'unit'  => 'px'
+			),
+			'f_mss'                 => array(
+				'type'  => 'slider',
+				'label' => __( 'Max Screen Size', 'pace-builder' ),
+				'default' => 768,
+				'max'   => 768,
+				'min'   => 420,
 				'step'  => 1,
 				'unit'  => 'px'
 			),
@@ -348,11 +357,11 @@ class PTPB_Form extends PTPB_Singleton {
 
 		switch ( $type ) {
 			case 'text':
-				$field_html .= '<input name="%1$s" class="regular-text" type="text" value="{{{ ptPbApp.htmlEncode(%1$s) }}}"/>';
+				$field_html .= '<input name="%1$s" class="regular-text" type="text" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}"/>';
 				break;
 
 			case 'hidden':
-				$field_html .= '<input name="%1$s" class="regular-text" type="hidden" value="{{{ ptPbApp.htmlEncode(%1$s) }}}"/>';
+				$field_html .= '<input name="%1$s" class="regular-text" type="hidden" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}"/>';
 				$field_container = '<div>%3$s</div>';
 				break;
 
@@ -361,51 +370,51 @@ class PTPB_Form extends PTPB_Singleton {
 				break;
 
 			case 'tinymce':
-				$field_html .= '<input name="content" class="hidden" value="{{{ ptPbApp.htmlEncode(content) }}}" type="hidden" />';
+				$field_html .= '<input name="content" class="hidden" value="{{{ ptPbApp.htmlEncode(data.content) }}}" type="hidden" />';
 				break;
 
 			case 'autocomplete':
 				$action = empty( $field['action'] ) ? false : $field['action'];
-				$field_html .= '<input name="%1$s" class="regular-text pt-autocomplete" type="text" value="{{{ ptPbApp.htmlEncode(%1$s) }}}" data-action="'. $action .'" />';
+				$field_html .= '<input name="%1$s" class="regular-text pt-autocomplete" type="text" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}" data-action="'. $action .'" />';
 				$field_container = '<div>%3$s</div>';
 				break;
 
 			case 'color':
-				$field_html .= '<input name="%1$s" class="pt-pb-color color-picker" type="text" data-alpha="true" value="{{{ ptPbApp.htmlEncode(%1$s) }}}"/>';
+				$field_html .= '<input name="%1$s" class="pt-pb-color color-picker" type="text" data-alpha="true" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}"/>';
 				break;
 
 			case 'icon':
-				$field_html .= '<div class="icon-preview"><i class="icon fa-5x {{{%1$s}}}"></i></div> <input name="%1$s" type="hidden" class="pt-pb-icon" value="{{{%1$s}}}"> <input type="button" class="button pt-pb-icon-select" value="' . __( 'Select Icon', 'pace-builder' ) . '"> <input type="button" class="button pt-pb-icon-delete" value="' . __( 'Remove', 'pace-builder' ) . '">';
+				$field_html .= '<div class="icon-preview"><i class="icon fa-5x {{{%1$s}}}"></i></div> <input name="%1$s" type="hidden" class="pt-pb-icon" value="{{{data.%1$s}}}"> <input type="button" class="button pt-pb-icon-select" value="' . __( 'Select Icon', 'pace-builder' ) . '"> <input type="button" class="button pt-pb-icon-delete" value="' . __( 'Remove', 'pace-builder' ) . '">';
 				break;
 
 			case 'slider':
-				$field_html .= '<input name="%1$s" class="input-slider" type="text" value="{{{%1$s}}}" max="' . $field['max'] . '" min="' . $field['min'] . '" step="' . $field['step'] . '" data-postfix="' . $field['unit'] . '" data-hide-min-max="true">';
+				$field_html .= '<input name="%1$s" class="input-slider" type="text" value="{{{data.%1$s}}}" max="' . $field['max'] . '" min="' . $field['min'] . '" step="' . $field['step'] . '" data-postfix="' . $field['unit'] . '" data-hide-min-max="true">';
 				break;
 
 			case 'range-slider':
-				$field_html .= '<input name="%1$s" class="input-range-slider" type="text" value="{{{%1$s}}}" max="' . $field['max'] . '" min="' . $field['min'] . '" step="' . $field['step'] . '" data-postfix="' . $field['unit'] . '" data-hide-min-max="true">';
+				$field_html .= '<input name="%1$s" class="input-range-slider" type="text" value="{{{data.%1$s}}}" max="' . $field['max'] . '" min="' . $field['min'] . '" step="' . $field['step'] . '" data-postfix="' . $field['unit'] . '" data-hide-min-max="true">';
 				break;
 
 			case 'date':
-				$field_html .= '<input name="%1$s" class="date-picker" type="text" value="{{{ ptPbApp.htmlEncode(%1$s) }}}"/>';
+				$field_html .= '<input name="%1$s" class="date-picker" type="text" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}"/>';
 				break;
 
 			case 'time':
-				$field_html .= '<input name="%1$s" class="time-picker" type="text" value="{{{ ptPbApp.htmlEncode(%1$s) }}}"/>';
+				$field_html .= '<input name="%1$s" class="time-picker" type="text" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}"/>';
 				break;
 
 			case 'datetime':
-				$field_html .= '<input name="%1$s" class="datetime-picker" type="text" value="{{{ ptPbApp.htmlEncode(%1$s) }}}"/>';
+				$field_html .= '<input name="%1$s" class="datetime-picker" type="text" value="{{{ ptPbApp.htmlEncode(data.%1$s) }}}"/>';
 				break;
 
 			case 'image':
-				$field_html .= '<input name="%1$s" type="text" class="regular-text pt-pb-upload-field" value="{{{%1$s}}}"> <input type="button" class="button pt-pb-upload-button" value="' . $image_lbl . '" data-type="image" data-choose="' . $image_lbl . '" data-update="' . $image_lbl . '"> <input type="button" class="button pt-pb-remove-upload-button" value="' . __( 'Remove', 'pace-builder' ) . '" data-type="image">
-				<# if(typeof post_id !== "undefined") { #><input name="post_id" type="hidden" class="regular-text pt-pb-upload-field-id" value={{{post_id}}} /> <# } #> ';
+				$field_html .= '<input name="%1$s" type="text" class="regular-text pt-pb-upload-field" value="{{{data.%1$s}}}"> <input type="button" class="button pt-pb-upload-button" value="' . $image_lbl . '" data-type="image" data-choose="' . $image_lbl . '" data-update="' . $image_lbl . '"> <input type="button" class="button pt-pb-remove-upload-button" value="' . __( 'Remove', 'pace-builder' ) . '" data-type="image">
+				<# if(typeof post_id !== "undefined") { #><input name="post_id" type="hidden" class="regular-text pt-pb-upload-field-id" value={{{data.post_id}}} /> <# } #> ';
 				$after = '<div class="screenshot"></div>';
 				break;
 
 			case 'video':
-				$field_html .= '<input name="%1$s" type="text" class="regular-text pt-pb-upload-field" value="{{{%1$s}}}"> <input type="button" class="button pt-pb-upload-button" value="' . $video_lbl . '" data-type="image" data-choose="' . $video_lbl . '" data-update="' . $video_lbl . '"> <input type="button" class="button pt-pb-remove-upload-button" value="' . __( 'Remove', 'pace-builder' ) . '" data-type="image">';
+				$field_html .= '<input name="%1$s" type="text" class="regular-text pt-pb-upload-field" value="{{{data.%1$s}}}"> <input type="button" class="button pt-pb-upload-button" value="' . $video_lbl . '" data-type="image" data-choose="' . $video_lbl . '" data-update="' . $video_lbl . '"> <input type="button" class="button pt-pb-remove-upload-button" value="' . __( 'Remove', 'pace-builder' ) . '" data-type="image">';
 				break;
 
 			case 'chosen':
@@ -414,7 +423,7 @@ class PTPB_Form extends PTPB_Singleton {
 				break;
 
 			case 'font':
-				$n         = str_replace( '_f', '', $name );
+				$n         = 'data.' . str_replace( '_f', '', $name );
 				$bold      = $n . '_b';
 				$italic    = $n . '_i';
 				$underline = $n . '_u';
@@ -445,107 +454,107 @@ class PTPB_Form extends PTPB_Singleton {
 
 			case 'animation':
 				$field_html .= "<select class='js-animations' name='animation'>
-										{{{ptPbApp.generateOption(animation, '', 'none')}}}
+										{{{ptPbApp.generateOption(data.animation, '', 'none')}}}
 									<optgroup label='Attention Seekers'>
-										{{{ptPbApp.generateOption(animation, 'bounce')}}}
-										{{{ptPbApp.generateOption(animation, 'flash')}}}
-										{{{ptPbApp.generateOption(animation, 'pulse')}}}
-										{{{ptPbApp.generateOption(animation, 'rubberBand')}}}
-										{{{ptPbApp.generateOption(animation, 'shake')}}}
-										{{{ptPbApp.generateOption(animation, 'swing')}}}
-										{{{ptPbApp.generateOption(animation, 'tada')}}}
-										{{{ptPbApp.generateOption(animation, 'wobble')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounce')}}}
+										{{{ptPbApp.generateOption(data.animation, 'flash')}}}
+										{{{ptPbApp.generateOption(data.animation, 'pulse')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rubberBand')}}}
+										{{{ptPbApp.generateOption(data.animation, 'shake')}}}
+										{{{ptPbApp.generateOption(data.animation, 'swing')}}}
+										{{{ptPbApp.generateOption(data.animation, 'tada')}}}
+										{{{ptPbApp.generateOption(data.animation, 'wobble')}}}
 									</optgroup>
 
 									<optgroup label='Bouncing Entrances'>
-										{{{ptPbApp.generateOption(animation, 'bounceIn')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceInDown')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceInLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceInRight')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceInUp')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceIn')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceInDown')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceInLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceInRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceInUp')}}}
 									</optgroup>
 
 									<optgroup label='Bouncing Exits'>
-										{{{ptPbApp.generateOption(animation, 'bounceOut')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceOutDown')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceOutLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceOutRight')}}}
-										{{{ptPbApp.generateOption(animation, 'bounceOutUp')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceOut')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceOutDown')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceOutLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceOutRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'bounceOutUp')}}}
 									</optgroup>
 
 									<optgroup label='Fading Entrances'>
-										{{{ptPbApp.generateOption(animation, 'fadeIn')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInDown')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInDownBig')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInLeftBig')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInRight')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInRightBig')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInUp')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeInUpBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeIn')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInDown')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInDownBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInLeftBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInRightBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInUp')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeInUpBig')}}}
 									</optgroup>
 
 									<optgroup label='Fading Exits'>
-										{{{ptPbApp.generateOption(animation, 'fadeOut')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutDown')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutDownBig')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutLeftBig')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutRight')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutRightBig')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutUp')}}}
-										{{{ptPbApp.generateOption(animation, 'fadeOutUpBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOut')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutDown')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutDownBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutLeftBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutRightBig')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutUp')}}}
+										{{{ptPbApp.generateOption(data.animation, 'fadeOutUpBig')}}}
 									</optgroup>
 
 									<optgroup label='Flippers'>
-										{{{ptPbApp.generateOption(animation, 'flip')}}}
-										{{{ptPbApp.generateOption(animation, 'flipInX')}}}
-										{{{ptPbApp.generateOption(animation, 'flipInY')}}}
-										{{{ptPbApp.generateOption(animation, 'flipOutX')}}}
-										{{{ptPbApp.generateOption(animation, 'flipOutY')}}}
+										{{{ptPbApp.generateOption(data.animation, 'flip')}}}
+										{{{ptPbApp.generateOption(data.animation, 'flipInX')}}}
+										{{{ptPbApp.generateOption(data.animation, 'flipInY')}}}
+										{{{ptPbApp.generateOption(data.animation, 'flipOutX')}}}
+										{{{ptPbApp.generateOption(data.animation, 'flipOutY')}}}
 									</optgroup>
 
 									<optgroup label='Lightspeed'>
-										{{{ptPbApp.generateOption(animation, 'lightSpeedIn')}}}
-										{{{ptPbApp.generateOption(animation, 'lightSpeedOut')}}}
+										{{{ptPbApp.generateOption(data.animation, 'lightSpeedIn')}}}
+										{{{ptPbApp.generateOption(data.animation, 'lightSpeedOut')}}}
 									</optgroup>
 
 									<optgroup label='Rotating Entrances'>
-										{{{ptPbApp.generateOption(animation, 'rotateIn')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateInDownLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateInDownRight')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateInUpLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateInUpRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateIn')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateInDownLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateInDownRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateInUpLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateInUpRight')}}}
 									</optgroup>
 
 									<optgroup label='Rotating Exits'>
-										{{{ptPbApp.generateOption(animation, 'rotateOut')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateOutDownLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateOutDownRight')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateOutUpLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'rotateOutUpRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateOut')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateOutDownLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateOutDownRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateOutUpLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rotateOutUpRight')}}}
 									</optgroup>
 
 									<optgroup label='Specials'>
-										{{{ptPbApp.generateOption(animation, 'hinge')}}}
-										{{{ptPbApp.generateOption(animation, 'rollIn')}}}
-										{{{ptPbApp.generateOption(animation, 'rollOut')}}}
+										{{{ptPbApp.generateOption(data.animation, 'hinge')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rollIn')}}}
+										{{{ptPbApp.generateOption(data.animation, 'rollOut')}}}
 									</optgroup>
 
 									<optgroup label='Zoom Entrances'>
-										{{{ptPbApp.generateOption(animation, 'zoomIn')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomInDown')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomInLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomInRight')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomInUp')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomIn')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomInDown')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomInLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomInRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomInUp')}}}
 									</optgroup>
 
 									<optgroup label='Zoom Exits'>
-										{{{ptPbApp.generateOption(animation, 'zoomOut')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomOutDown')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomOutLeft')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomOutRight')}}}
-										{{{ptPbApp.generateOption(animation, 'zoomOutUp')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomOut')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomOutDown')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomOutLeft')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomOutRight')}}}
+										{{{ptPbApp.generateOption(data.animation, 'zoomOutUp')}}}
 									</optgroup>
 								</select>";
 					$after = '<h3 class="animation-preview">' . __( 'Animation Preview', 'pace-builder' ) . '</h3>';
@@ -610,7 +619,7 @@ class PTPB_Form extends PTPB_Singleton {
 	 * @return string
 	 */
 	private function form_select_option( $select_name, $label, $value ){
-		return sprintf( '<option value="%1$s" {{{ (%2$s == "%1$s" || (jQuery.isArray(%2$s) && %2$s.indexOf("%1$s") > -1 )) ? "selected" : "" }}}>%3$s</option>', $value, $select_name, $label );
+		return sprintf( '<option value="%1$s" {{{ (%2$s == "%1$s" || (jQuery.isArray(%2$s) && %2$s.indexOf("%1$s") > -1 )) ? "selected" : "" }}}>%3$s</option>', $value, "data.$select_name", $label );
 	}
 
 	/**
@@ -624,7 +633,7 @@ class PTPB_Form extends PTPB_Singleton {
 		$html  = '';
 		if ( ! empty( $menus ) ) {
 			foreach ( $menus as $menu ) {
-				$html .= sprintf( "{{{ ptPbApp.generateOption( %s, '%s', '%s' ) }}}\n", $select_name, esc_attr( $menu->term_id ), $menu->name );
+				$html .= sprintf( "{{{ ptPbApp.generateOption( %s, '%s', '%s' ) }}}\n", "data.$select_name", esc_attr( $menu->term_id ), $menu->name );
 			}
 		}
 

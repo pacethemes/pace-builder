@@ -178,13 +178,16 @@ ptPbApp.Behaviors = ptPbApp.Behaviors || {};
 
         submit: function (e) {
             var data = this.$(':input:not(button, .button)').serializeObject();
+
+            this.$(':checkbox:not(:checked)').map(function(){
+              data[this.getAttribute('name')] = false;
+            });
+
             if (this.$content.length > 0) {
                 data.content = ptPbApp.getContent();
                 delete data.ptpb_editor;
             }
-            if (!data.f_e) {
-                data.f_e = false;
-            }
+
             if( this.$chosens && this.$chosens.length ) {
                 this.$chosens.each(function(){
                     var $c = $(this),

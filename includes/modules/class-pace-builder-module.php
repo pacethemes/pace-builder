@@ -54,8 +54,8 @@ class PTPB_Module extends PTPB_Singleton {
 		<!-- <?php echo $this->slug; ?> module preview template -->
 		<script type="text/template" id="pt-pb-tmpl-module-<?php echo $this->slug(); ?>">
 			<div class="pt-pb-<?php echo $this->slug(); ?>-preview">
-				{{{ ptPbApp.partial('module-header', { label: label, module: type }) }}}
-				<div class="content-preview" style="display: {{{ ptPbOptions.formFields.items[type] ? 'block' : 'none'  }}};">
+				{{{ ptPbApp.partial('module-header', { label: data.label, module: data.type }) }}}
+				<div class="content-preview" style="display: {{{ ptPbOptions.formFields.items[data.type] ? 'block' : 'none'  }}};">
 					<?php $this->preview(); ?>
 					<?php
 						if ( $this->has_items ) {
@@ -104,8 +104,7 @@ class PTPB_Module extends PTPB_Singleton {
 		?>
 		<script type="text/template" id="pt-pb-tmpl-module-<?php echo $this->slug(); ?>-item">
 			<div class="pt-pb-item-content-inner">
-				{{{ptPbApp.partial('module-item-header', { label: typeof label !== 'undefined' ? label : ''
-				})}}}
+				{{{ptPbApp.partial('module-item-header', { label: data.label })}}}
 			</div>
 		</script>
 

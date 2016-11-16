@@ -99,7 +99,7 @@ if ( ! class_exists( 'PTPB_Module_Title' ) ) :
 		 */
 		public function preview() {
 			?>
-			<{{{ size }}}>{{{ title }}}</{{{ size }}}>
+			<{{{ data.size }}}>{{{ data.title }}}</{{{ data.size }}}>
 			<?php
 		}
 

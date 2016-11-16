@@ -85,7 +85,7 @@ if ( ! class_exists( 'PTPB_Module_ContactForm7' ) ) :
 		 */
 		public function preview() {
 			?>
-			<?php _e( 'Form ID', 'pace-builder' ) ?>:  {{{ form_id }}}
+			<?php _e( 'Form ID', 'pace-builder' ) ?>:  {{{ data.form_id }}}
 			<?php
 		}
 

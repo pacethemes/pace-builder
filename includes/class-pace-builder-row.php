@@ -83,7 +83,7 @@ class PTPB_Row extends PTPB_Singleton {
 		<script type="text/template" id="pt-pb-tmpl-row">
 			<div class="pt-pb-row-preview">
 				<div class="pt-pb-row-header">
-					<h3 class="pt-pb-row-label">{{{label}}}</h3>
+					<h3 class="pt-pb-row-label">{{{ data.label }}}</h3>
 
 					<div class="pt-pb-controls">
 						<a href="#" class="pt-pb-settings-columns" title="<?php _e( 'Column Layout', 'pace-builder' ); ?>"><i

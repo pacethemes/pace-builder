@@ -90,7 +90,7 @@ if ( ! class_exists( 'PTPB_Module_Image' ) ) :
 		 */
 		public function preview() {
 			?>
-			<div style="text-align:{{{align}}};"><img src="{{{src}}}"/></div>
+			<div style="text-align:{{{data.align}}};"><img src="{{{data.src}}}"/></div>
 		<?php
 		}
 

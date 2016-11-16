@@ -125,7 +125,7 @@ class PTPB_Column extends PTPB_Singleton {
 				<div title="Drag-and-drop this column into place"
 				     class="pt-pb-column-header pt-pb-column-sortable ui-sortable-handle">
 					<div class="sortable-background column-sortable-background">
-						<?php _e( 'Column', 'pace-builder' ); ?> : {{{ type }}}
+						<?php _e( 'Column', 'pace-builder' ); ?> : {{{ data.type }}}
 					</div>
 					<div class="pt-pb-controls">
 						<a href="#" class="pt-pb-settings-column" title="Column Settings"><i class="fa fa-cog"></i></a>

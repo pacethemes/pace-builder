@@ -60,7 +60,7 @@ if ( ! class_exists( 'PTPB_Module_GoogleMap' ) ) :
 				'_map'	=> array(
 					'type'   => 'hidden',
 					'label'  => 'Map',
-					'append' => '<div class="google-map-select" id="{{{ id }}}_map"></div><br/>
+					'append' => '<div class="google-map-select" id="{{{ data.id }}}_map"></div><br/>
 								 <div><strong>Zoom: </strong><span id="gmap-zoom-level"></span></div>
 								 <div><strong>Center: </strong><span id="gmap-center"></span></div><br/>
 								 <div id="gmap-points"></div><br/>'
@@ -125,14 +125,14 @@ if ( ! class_exists( 'PTPB_Module_GoogleMap' ) ) :
 		 */
 		public function preview() {
 			?>
-			<b><?php _e( 'Theme', 'pace-builder' ); ?>: </b>{{{ theme }}}<br/>
-			<b><?php _e( 'Map Height', 'pace-builder' ); ?>: </b> {{{ height }}}<br/>
-			<b><?php _e( 'Popup Border Color', 'pace-builder' ); ?>: </b> {{{ bd_color }}}<br/>
-			<b><?php _e( 'Popup Background Color', 'pace-builder' ); ?>: </b> {{{ bg_color }}}<br/>
-			<b><?php _e( 'Popup Text Color', 'pace-builder' ); ?>: </b> {{{ text_color }}}<br/>
-			<# if(typeof points !== "undefined" && points.length > 0) { #>
+			<b><?php _e( 'Theme', 'pace-builder' ); ?>: </b>{{{ data.theme }}}<br/>
+			<b><?php _e( 'Map Height', 'pace-builder' ); ?>: </b> {{{ data.height }}}<br/>
+			<b><?php _e( 'Popup Border Color', 'pace-builder' ); ?>: </b> {{{ data.bd_color }}}<br/>
+			<b><?php _e( 'Popup Background Color', 'pace-builder' ); ?>: </b> {{{ data.bg_color }}}<br/>
+			<b><?php _e( 'Popup Text Color', 'pace-builder' ); ?>: </b> {{{ data.text_color }}}<br/>
+			<# if(data.points && data.points.length) { #>
 			 	<b><?php _e( 'Points', 'pace-builder' ); ?>: </b> <br/>
-			 	<# _.each(points, function(point, i ) { #>
+			 	<# _.each(data.points, function(point, i ) { #>
 			 		Lat: {{{point.lat}}}, Lng: {{{point.lng}}}, Title: {{{point.title}}}, Street: {{{point.street}}} <br/>
 			 	<# }) #>	
 			 <# } #>
@@ -146,10 +146,10 @@ if ( ! class_exists( 'PTPB_Module_GoogleMap' ) ) :
 		public function points_template() {
 			?>
 			<script type="text/template" id="pt-pb-tmpl-module-<?php echo $this->slug(); ?>-points">
-				<# if(typeof points !== "undefined" && points.length > 0) { #>
+				<# if(data.points && data.points.length) { #>
 				 	<div>
 				 		<strong>Points:</strong><br/>
-				 		<# _.each(points, function(point, i ) { #>
+				 		<# _.each(data.points, function(point, i ) { #>
 					 		<b>Lat: </b>{{{point.lat}}}, <b>Lng: </b>{{{point.lng}}}, <b>Title: </b>{{{point.title}}}, <b>Street: </b>{{{point.street}}} <br/>
 					 	<# }) #>
 				 	</div>

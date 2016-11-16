@@ -2,7 +2,7 @@
 	<label><?php _e( 'Enabled', 'pace-builder' ); ?></label>
 
 	<div class="pt-pb-option-container">
-		<input type="checkbox" class="onoffswitch-checkbox" id="f_e" name="f_e" {{{f_e && (f_e == true || f_e.length) ? 'checked' : ''}}} value="true" />
+		<input type="checkbox" class="onoffswitch-checkbox" id="f_e" name="f_e" {{{(data.f_e == true || (data.f_e && data.f_e.length)) ? 'checked' : ''}}} value="true" />
 		<label class="onoffswitch-label" for="f_e">
 			<span class="onoffswitch-inner"></span>
 			<span class="onoffswitch-switch"></span>
@@ -32,24 +32,35 @@
 <?php ptpb_form_field( 'ft_ws' ); ?>
 
 <h3><?php _e( 'Tablets', 'pace-builder' ); ?></h3>
+
 <div class="pt-pb-option onoffswitch-wrap">
 	<label><?php _e( 'Enabled', 'pace-builder' ); ?></label>
 
 	<div class="pt-pb-option-container">
-		<input type="checkbox" class="onoffswitch-checkbox" id="t_f_e" name="t_f_e" {{{t_f_e && (t_f_e == true || t_f_e.length) ? 'checked' : ''}}} value="true" />
-		<label class="onoffswitch-label" for="t_f_e">
+		<input type="checkbox" class="onoffswitch-checkbox" id="f_et" name="f_et" {{{(data.f_et == true || (data.f_et && data.f_et.length)) ? 'checked' : ''}}} value="true" />
+		<label class="onoffswitch-label" for="f_et">
 			<span class="onoffswitch-inner"></span>
 			<span class="onoffswitch-switch"></span>
 		</label>
-
-		<p class="description"><?php _e( "Enable or disable typography settings for this element and it's children. If disabled typography settings will be applied from parent", 'pace-builder' ); ?></p>
 	</div>
 </div>
 
-<?php ptpb_form_field( 't_size' ); ?>
+<?php ptpb_form_field( 'f_tss' ); ?>
 <?php ptpb_form_field( 'fh_st' ); ?>
 <?php ptpb_form_field( 'ft_st' ); ?>
 
 <h3><?php _e( 'Mobiles', 'pace-builder' ); ?></h3>
+<div class="pt-pb-option onoffswitch-wrap">
+	<label><?php _e( 'Enabled', 'pace-builder' ); ?></label>
+
+	<div class="pt-pb-option-container">
+		<input type="checkbox" class="onoffswitch-checkbox" id="f_em" name="f_em" {{{(data.f_em == true || (data.f_em && data.f_em.length)) ? 'checked' : ''}}} value="true" />
+		<label class="onoffswitch-label" for="f_em">
+			<span class="onoffswitch-inner"></span>
+			<span class="onoffswitch-switch"></span>
+		</label>
+	</div>
+</div>
+<?php ptpb_form_field( 'f_mss' ); ?>
 <?php ptpb_form_field( 'fh_sm' ); ?>
 <?php ptpb_form_field( 'ft_sm' ); ?>

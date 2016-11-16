@@ -108,10 +108,10 @@ if ( ! class_exists( 'PTPB_Module_Gallery' ) ) :
 			?>
 			<script type="text/template" id="pt-pb-tmpl-module-<?php echo $this->slug(); ?>-item">
 				<div class="pt-pb-item-content-inner clearfix">
-					{{{ptPbApp.partial('module-item-header', { label: typeof label !== 'undefined' ? label : ''
+					{{{ptPbApp.partial('module-item-header', { label: data.label
 					})}}}
-					<# if( typeof src !== 'undefined' && src.trim() !== '' ) { #>
-						<img src="{{{src}}}" />
+					<# if( data.src && data.src.trim() !== '' ) { #>
+						<img src="{{{data.src}}}" />
 					<# } #>
 				</div>
 			</script>
@@ -140,7 +140,7 @@ if ( ! class_exists( 'PTPB_Module_Gallery' ) ) :
 		 */
 		public function item_preview() {
 			?>
-			<div class="item-content-wrap masonry-grid clearfix columns-{{{columns}}}"></div>
+			<div class="item-content-wrap masonry-grid clearfix columns-{{{data.columns}}}"></div>
 			<div class="pt-pb-column-foot">
 				<a href="#" class="pt-pb-insert-item button"><span> <i
 							class="fa fa-plus-circle"></i> <?php echo __( 'Add ', 'pace-builder' ) . $this->item_label; ?></span></a>

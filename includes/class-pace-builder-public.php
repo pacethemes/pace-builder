@@ -305,17 +305,43 @@ class PTPB_Public {
 		$css .= sprintf( '#%1$s h1, #%1$s h2, #%1$s h3, #%1$s h4, #%1$s h5, #%1$s h6 { %2$s color: %3$s; }' . "\n", $item['id'], $this->typography_css( $item, $heading_props ), $item['fh_c'] );
 
 		if( isset( $item['fh_s'] ) ) {
+			$css .= $this->heading_typography( $item['id'], intval( $item['fh_s'] ) );
+		}
 
-			$heading_size = intval( $item['fh_s'] );
+		if( isset( $item['fh_st'] ) ) {
+			$size = explode( ';', $item['f_tss'] );
+			$css .= sprintf( "@media (min-width: %spx) and (max-width: %spx) { %s }", 
+								intval( empty( $size[0] ) ? 768 : $size[0] ),
+								intval( empty( $size[1] ) ? 991 : $size[1] ),
+								$this->heading_typography( $item['id'], intval( $item['fh_st'] ) 
+							) );
+		}
 
-			$css .= sprintf( '#%1$s h2{ font-size: %2$spx; } #%1$s h3{ font-size: %3$spx; } #%1$s h4{ font-size: %4$spx; } #%1$s h5{ font-size: %5$spx; } #%1$s h6{ font-size: %6$spx; }' . "\n", 
+		if( isset( $item['ft_st'] ) ) {
+			$size = explode( ';', $item['f_tss'] );
+			$css .= sprintf( '@media (min-width: %1$spx) and (max-width: %2$spx) { #%3$s, #%3$s p { font-size: %4$spx; } }', 
+								intval( empty( $size[0] ) ? 768 : $size[0] ),
+								intval( empty( $size[1] ) ? 991 : $size[1] ),
 								$item['id'], 
-								floor( $heading_size * 0.833 ),
-								floor( $heading_size * 0.833 * 0.833 ),
-								floor( $heading_size * 0.833 * 0.833 * 0.833 ),
-								floor( $heading_size * 0.833 * 0.833 * 0.833 * 0.833 ),
-								floor( $heading_size * 0.833 * 0.833 * 0.833 * 0.833 * 0.833 )
-							);
+								intval( $item['ft_st'] 
+							) );
+		}
+
+		if( isset( $item['fh_sm'] ) ) {
+			$size = intval( $item['f_mss'] );
+			$css .= sprintf( "@media (max-width: %spx) { %s }", 
+								empty( $size ) ? 767 : $size,
+								$this->heading_typography( $item['id'], intval( $item['fh_sm'] ) 
+							) );
+		}
+
+		if( isset( $item['ft_sm'] ) ) {
+			$size = intval( $item['f_mss'] );
+			$css .= sprintf( '@media (max-width: %1$spx) { #%2$s, #%2$s p { font-size: %3$spx; } }', 
+								empty( $size ) ? 767 : $size,
+								$item['id'], 
+								intval( $item['ft_sm'] 
+							) );
 		}
 
 		return $css;
@@ -395,6 +421,17 @@ class PTPB_Public {
 				$this->fonts_used[ $grp_name ][ $name ][ $variant ] = true;
 			}
 		}
+	}
+
+	private function heading_typography( $id, $size ){
+		return sprintf( '#%1$s h2{ font-size: %2$spx; } #%1$s h3{ font-size: %3$spx; } #%1$s h4{ font-size: %4$spx; } #%1$s h5{ font-size: %5$spx; } #%1$s h6{ font-size: %6$spx; }' . "\n", 
+					$id, 
+					floor( $size * 0.833 ),
+					floor( $size * 0.833 * 0.833 ),
+					floor( $size * 0.833 * 0.833 * 0.833 ),
+					floor( $size * 0.833 * 0.833 * 0.833 * 0.833 ),
+					floor( $size * 0.833 * 0.833 * 0.833 * 0.833 * 0.833 )
+				);
 	}
 
 	/**

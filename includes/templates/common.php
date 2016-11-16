@@ -1,13 +1,13 @@
 <script type="text/template" id="pt-pb-tmpl-module-header">
 	<# var module = typeof module != 'undefined' ? module : 'module'; #>
-		<div class="module-controls {{{ ptPbOptions.formFields.items[module] ? '' : 'close'  }}}">
-			<div class="edit-module edit-module-{{{ module }}}">
+		<div class="module-controls {{{ ptPbOptions.formFields.items[data.module] ? '' : 'close'  }}}">
+			<div class="edit-module edit-module-{{{ data.module }}}">
 				<a href="#" title="<?php _e( 'Edit Module', 'pace-builder' ) ?>" class="edit"><i class="fa fa-bars"></i></a>
 				<a href="#" title="<?php _e( 'Clone Module', 'pace-builder' ); ?>" class="clone"><i
 						class="fa fa-clone"></i></a>
 				<a href="#" title="<?php _e( 'Delete Module', 'pace-builder' ) ?>" class="remove"><i class="fa fa-trash-o"></i></a>
 			</div>
-			<div class="admin-label">{{{label}}}</div>
+			<div class="admin-label">{{{data.label}}}</div>
 			<# if( typeof hideToggle === 'undefined' || !hideToggle ) { #>
 				<a href="#" class="pt-pb-module-toggle" title="<?php _e( 'Click to toggle', 'pace-builder' ); ?>">
 					<div class="handlediv"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></div>
@@ -23,7 +23,7 @@
 			<a href="#" title="<?php _e( 'Clone', 'pace-builder' ); ?>" class="clone"><i class="fa fa-clone"></i></a>
 			<a href="#" title="<?php _e( 'Delete', 'pace-builder' ) ?>" class="remove"><i class="fa fa-trash-o"></i></a>
 		</div>
-		<div class="admin-label">{{{label}}}</div>
+		<div class="admin-label">{{{data.label}}}</div>
 	</div>
 </script>
 
@@ -141,13 +141,13 @@
 
 <script type="text/template" id="pt-pb-tmpl-layout-items">
 	<div class="pt-pb-layout-items clearfix">
-		<# if( type === 'import' ) { #>
-			<div class="pt-pb-layout-item" data-layout-type="{{{ type }}}">
+		<# if( data.type === 'import' ) { #>
+			<div class="pt-pb-layout-item" data-layout-type="{{{ data.type }}}">
 				{{{ptPbApp.partial('insert-layout-dropdown')}}}
 			</div>
-			<# } else if( type === 'prebuilt' || type === 'theme-prebuilt' ) { #>
-				<#  _.each( layouts, function( layout, name ){ #>
-					<div class="pt-pb-layout-item" data-layout="{{{ name }}}" data-layout-type="{{{ type }}}">
+			<# } else if( data.type === 'prebuilt' || data.type === 'theme-prebuilt' ) { #>
+				<#  _.each( data.layouts, function( layout, name ){ #>
+					<div class="pt-pb-layout-item" data-layout="{{{ name }}}" data-layout-type="{{{ data.type }}}">
 						<div class="item-wrap">
 							<div class="item-thumb">
 								<# if(layout.thumb) { #>
@@ -166,7 +166,7 @@
 					</div>
 					<# }); #>
 						<# } else { #>
-							<#  _.each( layouts, function( layout, name ){ #>
+							<#  _.each( data.layouts, function( layout, name ){ #>
 								<div class="pt-pb-layout-item" data-layout="{{{ name }}}"
 								     data-layout-type="{{{ type }}}">
 									<div class="item-wrap">
@@ -328,7 +328,7 @@
 		<div class="edit-module">
 			<a href="#" title="Delete" class="remove"><i class="fa fa-trash-o"></i></a>
 		</div>
-		<div class="admin-label"><?php _e( 'Missing Module', 'pace-builder' ); ?> - {{{type}}}</div>
+		<div class="admin-label"><?php _e( 'Missing Module', 'pace-builder' ); ?> - {{{data.type}}}</div>
 	</div>
 </script>
 
@@ -366,7 +366,7 @@
 
 <script type="text/template" id="pt-pb-tmpl-icon-item">
 	<div>
-	<# _(models).each(function(icon) { #>
+	<# _(data.models).each(function(icon) { #>
 		<div class="icon-hover"><a href="#" data-class="{{{icon.cls}}}"><i class="{{{icon.cls}}}"></i> {{{icon.name}}}</a></div>
 	<# }) #>
 	</div>

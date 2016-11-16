@@ -99,7 +99,7 @@ if ( ! class_exists( 'PTPB_Module_Video' ) ) :
 		 */
 		public function preview() {
 			_e( 'Video Link', 'pace-builder' ); ?>
-			: {{{link}}}
+			: {{{data.link}}}
 			<?php
 		}
 

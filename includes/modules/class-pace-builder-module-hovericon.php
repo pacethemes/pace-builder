@@ -98,9 +98,9 @@ if ( ! class_exists( 'PTPB_Module_HoverIcon' ) ) :
 		 */
 		public function preview() {
 			?>
-				<a href="{{{href}}}" target="_blank" class="icon fa-{{{size}}}x {{{icon}}}"></a>
-				<h3 class="icon-title">{{{title}}}</h3>
-				{{{ptPbApp.stripslashes(content)}}}
+				<a href="{{{data.href}}}" target="_blank" class="icon fa-{{{data.size}}}x {{{data.icon}}}"></a>
+				<h3 class="icon-title">{{{data.title}}}</h3>
+				{{{ptPbApp.stripslashes(data.content)}}}
 			<?php
 		}
 

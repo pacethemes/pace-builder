@@ -48,7 +48,7 @@ if ( ! class_exists( 'PTPB_Module_Text' ) ) :
 		public function preview() {
 			?>
 			<#
-				var c = jQuery('<div>'+ptPbApp.stripslashes(content)+'</div>');
+				var c = jQuery('<div>'+ptPbApp.stripslashes(data.content)+'</div>');
 				c.find('script,style').each(function(){
 					jQuery(this).replaceWith(jQuery('<pre>'+this.innerHTML+'</pre>'));
 				});

@@ -112,7 +112,7 @@ if ( ! class_exists( 'PTPB_Module_Menu' ) ) :
 		 */
 		public function preview() {
 			?>
-			<?php _e( 'Menu ID', 'pace-builder' ) ?>:  {{{ menu }}}
+			<?php _e( 'Menu ID', 'pace-builder' ) ?>:  {{{ data.menu }}}
 			<?php
 		}
 

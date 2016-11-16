@@ -41,7 +41,7 @@ var ptPbApp = ptPbApp || {};
                     data = _.extend( {}, ptPbOptions.formFields.modules[id.replace('module-','').replace('-edit','')] || {}, data );
                 }
                 compiled = compiled || _.template($('#pt-pb-tmpl-' + id).html(), null, options);
-                return compiled(data);
+                return compiled({data: data});
             } catch(e){ 
                 if( console && console.error && !$('#pt-pb-tmpl-' + id).length ) {
                     console.error( 'Template "#pt-pb-tmpl-' + id + '" does not exist.' );

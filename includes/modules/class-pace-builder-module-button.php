@@ -133,7 +133,7 @@ if ( ! class_exists( 'PTPB_Module_Button' ) ) :
 		 */
 		public function preview() {
 			?>
-			<a class="button" href="{{{href}}}" target="{{{target}}}">{{{text}}}</a></div>
+			<a class="button" href="{{{data.href}}}" target="{{{data.target}}}">{{{data.text}}}</a></div>
 			<?php
 		}
 

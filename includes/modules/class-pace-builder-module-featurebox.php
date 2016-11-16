@@ -75,9 +75,9 @@ if ( ! class_exists( 'PTPB_Module_FeatureBox' ) ) :
 		 */
 		public function preview() {
 			?>
-				<a href="#" target="_blank" class="fa-{{{size}}}x {{{icon}}}"></a>
-				<h3 class="icon-title">{{{title}}}</h3>
-				{{{ptPbApp.stripslashes(content)}}}
+				<a href="#" target="_blank" class="fa-{{{data.size}}}x {{{data.icon}}}"></a>
+				<h3 class="icon-title">{{{data.title}}}</h3>
+				{{{ptPbApp.stripslashes(data.content)}}}
 			<?php
 		}
 

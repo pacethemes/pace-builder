@@ -74,7 +74,8 @@ ptPbApp.Models = ptPbApp.Models || {};
             fh_sm: '32px', //Mobiles font_heading_size
             ft_sm: '13px', //Mobiles font_textsize
 
-            t_size: '768;991'
+            f_tss: '768;991',
+            f_mss: 767
         },
         initialize: function () {
             this.on('change', ptPbApp.updatePBContent);
@@ -95,6 +96,14 @@ ptPbApp.Models = ptPbApp.Models || {};
                     if(json.ft_f == 'inherit'){
                         del = del.concat(opts.slice(11));
                     }
+                }
+
+                if(!json.f_et){
+                    del = del.concat(['f_tss','fh_st','ft_st']);
+                }
+
+                if(!json.f_em){
+                    del = del.concat(['f_mss','fh_sm','ft_sm']);
                 }
                 _.each(del, function (opt, i) {
                     if (opt in json)

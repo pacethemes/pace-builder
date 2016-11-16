@@ -147,7 +147,7 @@ class PTPB_Section extends PTPB_Singleton {
 			<div class="pt-pb-wrap">
 				<div class="pt-pb-section-preview">
 					<div class="pt-pb-header">
-						<h3 class="pt-pb-section-label">{{{label}}}</h3>
+						<h3 class="pt-pb-section-label">{{{data.label}}}</h3>
 
 						<div class="pt-pb-controls">
 							<a href="#" class="pt-pb-settings pt-pb-settings-section"
