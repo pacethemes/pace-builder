@@ -123,4 +123,8 @@ var ptPbApp = ptPbApp || {};
        return regexp.test(s);
     }
 
+    ptPbApp.slug = function (name){
+        return name.replace(/[&\/\\#,+()$~%.'":*?<>{}\s]/g, '-').toLowerCase();
+    }
+
 }(jQuery, _));

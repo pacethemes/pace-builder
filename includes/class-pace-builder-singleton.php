@@ -39,11 +39,24 @@ if ( ! function_exists( 'get_called_class' ) ) {
 		$l  = 0;
 		do {
 			$l ++;
-			$lines      = file( $bt[ $l ]['file'] );
-			$callerLine = $lines[ $bt[ $l ]['line'] - 1 ];
-			preg_match( '/([a-zA-Z0-9\_]+)::' . $bt[ $l ]['function'] . '/', $callerLine, $matches );
-		} while ( $matches[1] === 'parent' && $matches[1] );
+						
+			if( $bt[ $l ]['function'] === 'instance' && $bt[ $l ]['class'] === 'PTPB_Singleton' && ! empty( $bt[ $l ]['args'] ) ) {
+				return $bt[ $l ]['args'][0];
+			}
 
-		return $matches[1];
+			if( empty($bt[ $l ]['file']) ){
+				return;
+			}
+
+			$lines      = file( $bt[ $l ]['file'] );
+			$callerLine = $lines[ $bt[ $l ]['line'] - 1 ]; 
+
+			if( preg_match( '/([a-zA-Z0-9\_]+)::' . $bt[ $l ]['function'] . '/', $callerLine, $matches ) ) {
+				return $matches[1];
+			}
+
+		} while ( $l <= count( $bt ) );
+
+		return ;
 	}
 }

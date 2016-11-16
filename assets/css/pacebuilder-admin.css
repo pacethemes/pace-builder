@@ -74,6 +74,11 @@ html[xmlns] .clearfix {
   font-size: 24px !important;
   padding: 0 !important;
 }
+#pt-form-typo-settings h4 {
+  font-size: 18px !important;
+  font-weight: 300;
+  margin: 15px 0;
+}
 
 #pt-pb-stage {
   /* Opt-in outside padding */
@@ -1581,10 +1586,10 @@ textarea.regular-text {
 }
 .pt-pb-top-bar .pt-topbar-tabs li {
   margin: 0;
+  display: inline-block;
 }
 .pt-pb-top-bar .pt-topbar-tabs li a {
   display: inline-block;
-  float: left;
   padding: 12px 25px;
   color: #0073aa;
   font-size: 15px;
@@ -1697,6 +1702,10 @@ textarea.regular-text {
   display: none;
 }
 
+#pt-layout-pane-legacypagebuilder .layout-name {
+  box-shadow: none;
+}
+
 .pt-pb-layout-item {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1765,6 +1774,7 @@ textarea.regular-text {
   margin: 0;
   min-width: 100%;
   box-sizing: border-box;
+  z-index: 1000;
 }
 .pt-pb-dropdown li {
   margin: 0;
@@ -1780,6 +1790,10 @@ textarea.regular-text {
 .pt-pb-dropdown a:hover {
   background-color: #e5e5e5;
   color: #555;
+}
+
+.pt-pb-layout-item:nth-child(-n+4) .pt-pb-dropdown {
+  top: 28px;
 }
 
 .pt-layout-prebuilt.error {

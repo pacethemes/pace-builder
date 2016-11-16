@@ -96,6 +96,11 @@ html[xmlns] .clearfix {
     font-size: 24px !important;
     padding: 0 !important;
   }
+  h4 {
+    font-size: 18px !important;
+    font-weight: 300;
+    margin: 15px 0;
+  }
 }
 
 #pt-pb-stage {
@@ -1660,9 +1665,9 @@ textarea.regular-text {
     top: 1px;
     li {
       margin: 0;
+      display: inline-block;
       a {
         display: inline-block;
-        float: left;
         padding: 12px 25px;
         color: #0073aa;
         font-size: 15px;
@@ -1783,6 +1788,12 @@ textarea.regular-text {
   }
 }
 
+#pt-layout-pane-legacypagebuilder{
+  .layout-name{
+    box-shadow: none;
+  }
+}
+
 .pt-pb-layout-item {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1853,6 +1864,7 @@ textarea.regular-text {
   margin: 0;
   min-width: 100%;
   box-sizing: border-box;
+  z-index: 1000;
   li {
     margin: 0;
     padding: 0;
@@ -1866,6 +1878,14 @@ textarea.regular-text {
     &:hover {
       background-color: #e5e5e5;
       color: #555;
+    }
+  }
+}
+
+.pt-pb-layout-item{
+  &:nth-child(-n+4){
+    .pt-pb-dropdown {
+      top: 28px;
     }
   }
 }

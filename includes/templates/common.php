@@ -150,14 +150,17 @@
 					<div class="pt-pb-layout-item" data-layout="{{{ name }}}" data-layout-type="{{{ type }}}">
 						<div class="item-wrap">
 							<div class="item-thumb">
+								<# if(layout.thumb) { #>
 								<img src="{{{ layout.thumb }}}"/>
+								<# } #>
 							</div>
 							<h3 class="layout-name">{{{ name }}}</h3>
-
 							<div class="layout-actions">
 								{{{ptPbApp.partial('insert-layout-dropdown')}}}
+								<# if(layout.preview) { #>
 								<a href="{{{ layout.preview }}}" target="_blank"
 								   class="button layout-preview"><?php _e( 'Preview', 'pace-builder' ); ?></a>
+								<# } #>
 							</div>
 						</div>
 					</div>
@@ -177,7 +180,7 @@
 									</div>
 								</div>
 								<# }); #>
-									<# } #>
+						<# } #>
 	</div>
 </script>
 
@@ -339,7 +342,7 @@
 			<div class="pt-pb-top-bar">
 				<ul class="pt-topbar-tabs clearfix">
 					<# _.each(ptPbOptions.icons, function(icons, name) { 
-						var slug = name.replace(' ', '-').toLowerCase();
+						var slug = ptPbApp.slug(name);
 					#>
 					<li class="tab-active">
 						<a href="#pt-icons-{{{slug}}}">{{{name}}}</a>
@@ -349,7 +352,7 @@
 			</div>
 			
 			<# _.each(ptPbOptions.icons, function(icons, name) { 
-						var slug = name.replace(' ', '-').toLowerCase();
+						var slug = ptPbApp.slug(name);
 			#>
 			<div id="pt-icons-{{{slug}}}" class="pt-tab-pane">
 

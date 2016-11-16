@@ -264,7 +264,50 @@ class PTPB_Form extends PTPB_Singleton {
 				'step'  => 0.1,
 				'unit'  => 'px'
 			),
-
+			'tss'                 => array(
+				'type'  => 'range-slider',
+				'label' => __( 'Screen Size', 'pace-builder' ),
+				'default' => '768;991',
+				// 'desc'  => __( 'This is the size for H1, font sizes for H2 to H6 are calculated based on this size.', 'pace-builder' ),
+				'max'   => 991,
+				'min'   => 768,
+				'step'  => 1,
+				'unit'  => 'px'
+			),
+			'fh_st'                 => array(
+				'type'  => 'slider',
+				'label' => __( 'Title / Heading Font Size (px)', 'pace-builder' ),
+				'desc'  => __( 'This is the size for H1, font sizes for H2 to H6 are calculated based on this size.', 'pace-builder' ),
+				'max'   => 120,
+				'min'   => 8,
+				'step'  => 1,
+				'unit'  => 'px'
+			),
+			'ft_st'                 => array(
+				'type'  => 'slider',
+				'label' => __( 'Text / Content Font Size (px)', 'pace-builder' ),
+				'max'   => 60,
+				'min'   => 8,
+				'step'  => 1,
+				'unit'  => 'px'
+			),
+			'fh_sm'                 => array(
+				'type'  => 'slider',
+				'label' => __( 'Title / Heading Font Size (px)', 'pace-builder' ),
+				'desc'  => __( 'This is the size for H1, font sizes for H2 to H6 are calculated based on this size.', 'pace-builder' ),
+				'max'   => 120,
+				'min'   => 8,
+				'step'  => 1,
+				'unit'  => 'px'
+			),
+			'ft_sm'                 => array(
+				'type'  => 'slider',
+				'label' => __( 'Text / Content Font Size (px)', 'pace-builder' ),
+				'max'   => 60,
+				'min'   => 8,
+				'step'  => 1,
+				'unit'  => 'px'
+			),
 		);
 
 	}
@@ -337,6 +380,10 @@ class PTPB_Form extends PTPB_Singleton {
 
 			case 'slider':
 				$field_html .= '<input name="%1$s" class="input-slider" type="text" value="{{{%1$s}}}" max="' . $field['max'] . '" min="' . $field['min'] . '" step="' . $field['step'] . '" data-postfix="' . $field['unit'] . '" data-hide-min-max="true">';
+				break;
+
+			case 'range-slider':
+				$field_html .= '<input name="%1$s" class="input-range-slider" type="text" value="{{{%1$s}}}" max="' . $field['max'] . '" min="' . $field['min'] . '" step="' . $field['step'] . '" data-postfix="' . $field['unit'] . '" data-hide-min-max="true">';
 				break;
 
 			case 'date':

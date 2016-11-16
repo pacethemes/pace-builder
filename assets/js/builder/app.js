@@ -263,6 +263,14 @@ var ptPbApp = ptPbApp || {};
         }
     };
 
+    ptPbApp.topBar = function(){
+        $(document).on('pt-tab:open', 'div.pt-tab-pane', function () {
+            var $t = $(this),
+                h  = $t.closest('.bbm-modal__section').find('.pt-pb-top-bar').outerHeight();
+            $t.css('top', ++h + 'px');
+        });
+    };
+
     ptPbApp.GoogleMaps = {
 
         init : function (options) {
@@ -453,7 +461,7 @@ jQuery(document).ready(function ($) {
     ptPbApp.iconFilter.filters = {};
 
     _.each(ptPbOptions.icons, function(list, family){
-        var slug = family.replace(' ', '-').toLowerCase();
+        var slug = ptPbApp.slug(family);
         ptPbApp.iconFilter.icons[slug] = new Backbone.Collection( _.map(list, function(val, key){ return { name: key, cls: val } }));
         ptPbApp.iconFilter.filters[slug] = new ptPbApp.Models.Filter({collection: ptPbApp.iconFilter.icons[slug], where:['name']});
     });
@@ -508,7 +516,7 @@ jQuery(document).ready(function ($) {
         _.each(ptPbOptions.layouts, function(layout, name){
                 var pane = layout.tab_pane || 'Theme Prebuilt';
                 ptPbApp.layoutPanes[pane] = ptPbApp.layoutPanes[pane] || {};
-                ptPbApp.layoutPanes[pane][name] = layout;
+                ptPbApp.layoutPanes[pane][name] = _.isArray(layout) ? layout : [layout];
         });
 
         $('#ptpb_loader').fadeOut();
@@ -550,6 +558,7 @@ jQuery(document).ready(function ($) {
 
     ptPbApp.cache.$window.resize(ptPbApp.modulesHeight);
     ptPbApp.cache.$window.scroll(ptPbApp.fixedHeader);
+    ptPbApp.topBar();
 
     ptPbApp.app.start();
 

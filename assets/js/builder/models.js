@@ -67,6 +67,14 @@ ptPbApp.Models = ptPbApp.Models || {};
             ft_b: 0, //font_textbold
             ft_i: 0, //font_textitalic
             ft_u: 0, //font_textunderline
+
+            fh_st: '32px', //Tablets font_heading_size
+            ft_st: '13px', //Tablets font_textsize
+
+            fh_sm: '32px', //Mobiles font_heading_size
+            ft_sm: '13px', //Mobiles font_textsize
+
+            t_size: '768;991'
         },
         initialize: function () {
             this.on('change', ptPbApp.updatePBContent);
@@ -155,6 +163,7 @@ ptPbApp.Models = ptPbApp.Models || {};
             this.rowNum = 1;
             response.id = ptPbApp.getSectionNum();
             if (_.has(response, "rows")) {
+                response.rows = _.isObject(response.rows) ? _.map(response.rows, function(v,k){return v;}) : response.rows;
                 response.rows = response.rows.map(function (row) {
                     row.id = section.getRowId(response.id);
                     return row;
@@ -227,6 +236,7 @@ ptPbApp.Models = ptPbApp.Models || {};
             var row = this;
             this.colNum = 1;
             if (_.has(response, "columns")) {
+                response.columns = _.isObject(response.columns) ? _.map(response.columns, function(v,k){return v;}) : response.columns;
                 response.columns = response.columns.map(function (column) {
                     column.id = row.getColumnId(response.id);
                     return column;
@@ -309,6 +319,7 @@ ptPbApp.Models = ptPbApp.Models || {};
             var column = this;
             this.modNum = 1;
             if (_.has(response, "modules")) {
+                response.modules = _.isObject(response.modules) ? _.map(response.modules, function(v,k){return v;}) : response.modules;
                 response.modules = response.modules.map(function (module) {
                     return _.extend({}, column.getModuleDefaults(module), module, {id: column.getModuleId(response.id)});
                 });
@@ -371,6 +382,7 @@ ptPbApp.Models = ptPbApp.Models || {};
                 typ = module.get('item');
             this.itemNum = 1;
             if (_.has(response, "items")) {
+                response.items = _.isObject(response.items) ? _.map(response.items, function(v,k){return v;}) : response.items;
                 response.items = response.items.map(function (item) {
                     return _.extend({}, module.getItemDefaults(typ), item, {id: module.getItemId(response.id), type: typ});
                 });

@@ -464,6 +464,14 @@ ptPbApp.Behaviors = ptPbApp.Behaviors || {};
                     prettify_enabled: false
                 });
             });
+
+            this.$('div.pt-pb-option-container input.input-range-slider').each(function () {
+                $(this).ionRangeSlider({
+                    type: "double",
+                    keyboard: false,
+                    prettify_enabled: false
+                });
+            });
         },
 
         googleMap: function(){
