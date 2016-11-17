@@ -305,7 +305,7 @@
 
 <script type="text/template" id="pt-pb-tmpl-module-items">
 	<ul class="column-modules">
-	<# _(models).each(function(module) { #>
+	<# _(data.models).each(function(module) { #>
 		<# var icon = module.slug === 'widget' ? ( module.icon || ( module.class.indexOf('WP_Widget') > -1 ) ? 'dashicons dashicons-wordpress' : 'dashicons dashicons-admin-generic' )
 					 : ( ( module.ic.indexOf('dashicons') > -1 ) ? 'dashicons ' + module.ic : module.ic ) #>
 		<li class="column-module">

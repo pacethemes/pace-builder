@@ -302,7 +302,7 @@ class PTPB_Public {
 		}
 
 		$css = sprintf( '#%1$s, #%1$s p{ %2$s color: %3$s; }' . "\n", $item['id'], $this->typography_css( $item, $text_props ), $item['ft_c'] );
-		$css .= sprintf( '#%1$s h1, #%1$s h2, #%1$s h3, #%1$s h4, #%1$s h5, #%1$s h6 { %2$s color: %3$s; }' . "\n", $item['id'], $this->typography_css( $item, $heading_props ), $item['fh_c'] );
+		$css .= sprintf( '#%1$s h1, #%1$s h2, #%1$s h3, #%1$s h4, #%1$s h5, #%1$s h6 { %2$s color: %3$s; }' . "\n", $item['id'], $this->typography_css( $item, $heading_props ), empty( $item['fh_c'] ) ? 'inherit' : $item['fh_c'] );
 
 		if( isset( $item['fh_s'] ) ) {
 			$css .= $this->heading_typography( $item['id'], intval( $item['fh_s'] ) );
@@ -424,8 +424,9 @@ class PTPB_Public {
 	}
 
 	private function heading_typography( $id, $size ){
-		return sprintf( '#%1$s h2{ font-size: %2$spx; } #%1$s h3{ font-size: %3$spx; } #%1$s h4{ font-size: %4$spx; } #%1$s h5{ font-size: %5$spx; } #%1$s h6{ font-size: %6$spx; }' . "\n", 
+		return sprintf( '#%1$s h1{ font-size: %2$spx; } #%1$s h2{ font-size: %3$spx; } #%1$s h3{ font-size: %4$spx; } #%1$s h4{ font-size: %5$spx; } #%1$s h5{ font-size: %6$spx; } #%1$s h6{ font-size: %7$spx; }' . "\n", 
 					$id, 
+					floor( $size ),
 					floor( $size * 0.833 ),
 					floor( $size * 0.833 * 0.833 ),
 					floor( $size * 0.833 * 0.833 * 0.833 ),

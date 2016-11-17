@@ -21,6 +21,10 @@ class PTPB_Singleton {
 
 		$called_class = get_called_class();
 
+		if( ! $called_class ) {
+			return;
+		}
+
 		if ( ! isset( $instances[ $called_class ] ) ) {
 			$instances[ $called_class ] = new $called_class();
 		}

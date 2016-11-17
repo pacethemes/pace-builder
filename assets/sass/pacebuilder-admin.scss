@@ -1630,7 +1630,7 @@ textarea.regular-text {
 
 .pt-tab-pane {
   display: none;
-  border-top: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
   padding: 20px;
   overflow: auto;
   position: absolute;
@@ -1652,6 +1652,7 @@ textarea.regular-text {
 .pt-pb-top-bar {
   margin: 0;//-20px -20px 20px;
   background: #fcfcfc;
+  border-bottom: 1px solid #ddd;
   padding: 0px;
   position: absolute;
   top: 0px;
@@ -1683,6 +1684,7 @@ textarea.regular-text {
         color:#323732;
         border:1px solid #ddd;
         border-bottom: none;
+        padding-bottom: 13px;
       }
     }
   }

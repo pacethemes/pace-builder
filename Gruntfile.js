@@ -1,6 +1,24 @@
 'use strict';
 module.exports = function (grunt) {
 
+    var SOURCE_DIR = './',
+        VVV_DIR = '../../../../../',
+        FILES = [
+                    '**',
+                    '!node_modules/**',
+                    '!**/.{svn,git}/**', // Ignore version control directories.
+                    // Ignore unminified versions of external libs we don't ship:
+                    '!**tests/**', 
+                    '!**sass/**', 
+                    '!*.{scss,sass}', 
+                    '!.DS_Store', 
+                    '!.sass-cache', 
+                    '!karma.conf.js', 
+                    '!Gruntfile.js', 
+                    '!phpunit.xml', 
+                    '!package.json'
+                ];
+
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -72,6 +90,39 @@ module.exports = function (grunt) {
         csscss: {
             dist: {
                 src: ['assets/sass/pacebuilder-admin.scss']
+            }
+        },
+
+        copy: {
+            // main: {
+            //     expand: true,
+            //     src: 'src/*',
+            //     dest: 'dest/',
+            //   },
+            main: {
+                files: [
+                    {
+                        dot: true,
+                        expand: true,
+                        cwd: SOURCE_DIR,
+                        src: FILES,
+                        dest: VVV_DIR + '/www/pb/htdocs/wp-content/plugins/pace-builder/'
+                    },
+                    {
+                        dot: true,
+                        expand: true,
+                        cwd: SOURCE_DIR,
+                        src: FILES,
+                        dest: VVV_DIR + '/www/quest/htdocs/wp-content/plugins/pace-builder/'
+                    },
+                    {
+                        dot: true,
+                        expand: true,
+                        cwd: SOURCE_DIR,
+                        src: FILES,
+                        dest: VVV_DIR + '/../wp-vagrant/wordpress/build/wp-content/plugins/pace-builder/'
+                    }
+                ]
             }
         },
 
