@@ -1,7 +1,7 @@
 {
   "name": "pace-builder",
   "title": "Pace Builder",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Pace Builder is a Drag and Drop Page Builder for WordPress",
   "main": "Gruntfile.js",
   "scripts": {

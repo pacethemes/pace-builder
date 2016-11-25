@@ -384,7 +384,7 @@ class PTPB_Form extends PTPB_Singleton {
 				break;
 
 			case 'icon':
-				$field_html .= '<div class="icon-preview"><i class="icon fa-5x {{{%1$s}}}"></i></div> <input name="%1$s" type="hidden" class="pt-pb-icon" value="{{{data.%1$s}}}"> <input type="button" class="button pt-pb-icon-select" value="' . __( 'Select Icon', 'pace-builder' ) . '"> <input type="button" class="button pt-pb-icon-delete" value="' . __( 'Remove', 'pace-builder' ) . '">';
+				$field_html .= '<div class="icon-preview"><i class="icon fa-5x {{{data.%1$s}}}"></i></div> <input name="%1$s" type="hidden" class="pt-pb-icon" value="{{{data.%1$s}}}"> <input type="button" class="button pt-pb-icon-select" value="' . __( 'Select Icon', 'pace-builder' ) . '"> <input type="button" class="button pt-pb-icon-delete" value="' . __( 'Remove', 'pace-builder' ) . '">';
 				break;
 
 			case 'slider':

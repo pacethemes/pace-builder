@@ -16,7 +16,7 @@
  * Plugin Name:       Page Builder by PaceThemes
  * Plugin URI:        http://pacethemes.com/pace-builder
  * Description:       Drag and Drop Page Builder, build anything you need.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Author:            Pace Themes
  * Author URI:        http://pacethemes.com
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if ( ! class_exists( 'PTPB' ) ) :
 		 *
 		 * @var string
 		 */
-		public $version = '1.1.4';
+		public $version = '1.1.5';
 
 		/**
 		 * The single instance of the class.

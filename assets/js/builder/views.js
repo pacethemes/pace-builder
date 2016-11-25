@@ -215,7 +215,7 @@ ptPbApp.Behaviors = ptPbApp.Behaviors || {};
                 ptPbOptions.ajaxurl,
                 data,
                 function (result) {
-                    $elm.prepend(result);
+                    $elm.prepend(result).addClass('widget-edit');
                     view.removeLoader($elm);
                 },
                 'html'

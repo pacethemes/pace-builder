@@ -816,15 +816,15 @@ html[xmlns] .clearfix {
   max-width: 100%;
 }
 
-#pt-pb-widget-edit h4 {
+.widget-edit h4 {
   font-size: 1.8em;
 }
-#pt-pb-widget-edit p {
+.widget-edit p {
   margin: 10px 0;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 0;
 }
 
-#pt-pb-widget-edit p > label,
+.widget-edit p > label,
 .pt-pb-option label {
   margin-bottom: 5px;
   font-weight: 600;
@@ -834,7 +834,7 @@ html[xmlns] .clearfix {
   width: 30%;
   max-width: 250px;
 }
-#pt-pb-widget-edit p > label em,
+.widget-edit p > label em,
 .pt-pb-option label em {
   display: block;
   font-weight: 300;
@@ -843,40 +843,40 @@ html[xmlns] .clearfix {
   width: auto;
   padding-right: 10px;
 }
-#pt-pb-widget-edit p > label + br,
+.widget-edit p > label + br,
 .pt-pb-option label + br {
   display: none;
 }
 
-#pt-pb-widget-edit p .checkbox + label,
-#pt-pb-widget-edit p input[type="checkbox"] + label {
+.widget-edit p .checkbox + label,
+.widget-edit p input[type="checkbox"] + label {
   display: inline;
 }
 
-#pt-pb-widget-edit .widefat,
-#pt-pb-widget-edit input[type="text"],
-#pt-pb-widget-edit input[type="password"],
-#pt-pb-widget-edit input[type="email"],
-#pt-pb-widget-edit input[type="password"],
-#pt-pb-widget-edit input[type="search"],
-#pt-pb-widget-edit input[type="tel"],
-#pt-pb-widget-edit input[type="text"],
-#pt-pb-widget-edit input[type="url"],
-#pt-pb-widget-edit input[type="week"],
-#pt-pb-widget-edit select,
-#pt-pb-widget-edit textarea {
+.widget-edit .widefat,
+.widget-edit input[type="text"],
+.widget-edit input[type="password"],
+.widget-edit input[type="email"],
+.widget-edit input[type="password"],
+.widget-edit input[type="search"],
+.widget-edit input[type="tel"],
+.widget-edit input[type="text"],
+.widget-edit input[type="url"],
+.widget-edit input[type="week"],
+.widget-edit select,
+.widget-edit textarea {
   clear: none;
   max-width: 720px;
   width: 50%;
 }
-#pt-pb-widget-edit em {
+.widget-edit em {
   display: block;
   clear: both;
   font-size: 0.95em;
 }
 
-#pt-pb-widget-edit input[type="checkbox"],
-#pt-pb-widget-edit input[type="radio"] {
+.widget-edit input[type="checkbox"],
+.widget-edit input[type="radio"] {
   width: 16px !important;
 }
 
