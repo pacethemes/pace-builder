@@ -106,24 +106,23 @@ class PTPB_Row extends PTPB_Singleton {
 		<script type="text/template" id="pt-pb-tmpl-row-edit">
 			<div class="bbm-modal__topbar">
 				<h2><?php _e( 'Edit Row', 'pace-builder' ); ?></h2>
+				<div class="pt-pb-top-bar">
+					<ul class="pt-topbar-tabs clearfix">
+						<li class="tab-active">
+							<a href="#pt-form-module-settings"><?php _e( 'Row Settings', 'pace-builder' ); ?></a>
+						</li>
+						<li class="tab-active">
+							<a href="#pt-form-design-settings"><?php _e( 'Style Settings', 'pace-builder' ); ?></a>
+						</li>
+						<li>
+							<a href="#pt-form-typo-settings"><?php _e( 'Typography Settings', 'pace-builder' ); ?></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="bbm-modal__section">
+			<div class="bbm-modal__section has-tabs">
 
 				<div class="edit-content-wrap">
-
-					<div class="pt-pb-top-bar">
-						<ul class="pt-topbar-tabs clearfix">
-							<li class="tab-active">
-								<a href="#pt-form-module-settings"><?php _e( 'Row Settings', 'pace-builder' ); ?></a>
-							</li>
-							<li class="tab-active">
-								<a href="#pt-form-design-settings"><?php _e( 'Style Settings', 'pace-builder' ); ?></a>
-							</li>
-							<li>
-								<a href="#pt-form-typo-settings"><?php _e( 'Typography Settings', 'pace-builder' ); ?></a>
-							</li>
-						</ul>
-					</div>
 
 					<div id="pt-form-module-settings" class="pt-tab-pane">
 						<?php if ( method_exists( $this, 'fields' ) ) : ?>

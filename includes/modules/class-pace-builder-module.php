@@ -70,8 +70,21 @@ class PTPB_Module extends PTPB_Singleton {
 		<script type="text/template" id="pt-pb-tmpl-module-<?php echo $this->slug(); ?>-edit">
 			<div class="bbm-modal__topbar">
 				<h2><?php echo $this->label . ' ' . __( 'Settings ', 'pace-builder' ) ; ?></h2>
+				<div class="pt-pb-top-bar">
+					<ul class="pt-topbar-tabs clearfix">
+						<li class="tab-active">
+							<a href="#pt-form-module-settings"><?php _e( 'General', 'pace-builder' ); ?></a>
+						</li>
+						<li>
+							<a href="#pt-form-design-settings"><?php _e( 'Design Options', 'pace-builder' ); ?></a>
+						</li>
+						<li>
+							<a href="#pt-form-typo-settings"><?php _e( 'Typography Options', 'pace-builder' ); ?></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="bbm-modal__section">
+			<div class="bbm-modal__section has-tabs">
 				<div class="edit-content-wrap">
 					<?php $this->form(); ?>
 				</div>
@@ -164,20 +177,6 @@ class PTPB_Module extends PTPB_Singleton {
 	 */
 	public function form() {
 		?>
-		<div class="pt-pb-top-bar">
-			<ul class="pt-topbar-tabs clearfix">
-				<li class="tab-active">
-					<a href="#pt-form-module-settings"><?php _e( 'General', 'pace-builder' ); ?></a>
-				</li>
-				<li>
-					<a href="#pt-form-design-settings"><?php _e( 'Design Options', 'pace-builder' ); ?></a>
-				</li>
-				<li>
-					<a href="#pt-form-typo-settings"><?php _e( 'Typography Options', 'pace-builder' ); ?></a>
-				</li>
-			</ul>
-		</div>
-
 		<div id="pt-form-module-settings" class="pt-tab-pane">
 			<?php if ( method_exists( $this, 'fields' ) ) : ?>
 				<?php foreach ( $this->fields() as $name => $args ) : ?>

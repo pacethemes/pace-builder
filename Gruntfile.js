@@ -237,7 +237,8 @@ module.exports = function (grunt) {
                     ' */\n'
                 },
                 files: {
-                    'assets/css/pace-builder.min.css': ['assets/css/pace-builder.css']
+                    'assets/css/pacebuilder.min.css': ['assets/css/pacebuilder.css'],
+                    'assets/css/admin.min.css': ['assets/css/pacebuilder-admin.css', 'assets/css/settings.css']
                 }
             }
         },
@@ -372,7 +373,7 @@ module.exports = function (grunt) {
 
     // register task
     grunt.registerTask('default', ['watch', 'notify:watch']);
-    grunt.registerTask('assets', ['sass', 'uglify', 'cssmin']);
+    grunt.registerTask('assets', ['sass', 'uglify', 'postcss', 'cssmin']);
     grunt.registerTask('package', ['assets', 'compress']);
 
 };

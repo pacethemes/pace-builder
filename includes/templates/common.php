@@ -54,24 +54,24 @@
 <script type="text/template" id="pt-pb-tmpl-layout-manager">
 	<div class="bbm-modal__topbar">
 		<h2><?php _e( 'Manage Layouts', 'pace-builder' ); ?></h2>
+		<div class="pt-pb-top-bar">
+			<ul class="pt-topbar-tabs clearfix">
+				<li class="tab-active"><a href="#pt-layout-prebuilt"><?php _e( 'Prebuilt', 'pace-builder' ); ?></a> </li>
+				<# _.each(ptPbApp.layoutPanes, function(layouts, name) { #>
+				<li>
+					<a href="#pt-layout-pane-{{{ ptPbApp.paneName(name) }}}">{{{ name }}}</a>
+				</li>
+				<# }) #>
+				<li><a href="#pt-layout-load"><?php _e( 'Load from DB', 'pace-builder' ); ?></a></li>
+				<li><a href="#pt-layout-save"><?php _e( 'Save to DB', 'pace-builder' ); ?></a></li>
+				<li><a href="#pt-layout-import"><?php _e( 'Import', 'pace-builder' ); ?></a></li>
+				<li><a href="#pt-layout-export"><?php _e( 'Export', 'pace-builder' ); ?></a></li>
+			</ul>
+		</div>
 	</div>
 
-	<div class="bbm-modal__section">
+	<div class="bbm-modal__section has-tabs">
 		<div class="edit-content-wrap">
-			<div class="pt-pb-top-bar">
-				<ul class="pt-topbar-tabs clearfix">
-					<li class="tab-active"><a href="#pt-layout-prebuilt"><?php _e( 'Prebuilt', 'pace-builder' ); ?></a> </li>
-					<# _.each(ptPbApp.layoutPanes, function(layouts, name) { #>
-					<li>
-						<a href="#pt-layout-pane-{{{ ptPbApp.paneName(name) }}}">{{{ name }}}</a>
-					</li>
-					<# }) #>
-					<li><a href="#pt-layout-load"><?php _e( 'Load from DB', 'pace-builder' ); ?></a></li>
-					<li><a href="#pt-layout-save"><?php _e( 'Save to DB', 'pace-builder' ); ?></a></li>
-					<li><a href="#pt-layout-import"><?php _e( 'Import', 'pace-builder' ); ?></a></li>
-					<li><a href="#pt-layout-export"><?php _e( 'Export', 'pace-builder' ); ?></a></li>
-				</ul>
-			</div>
 			<div class="pt-pb-edit-content">
 				<div id="pt-layout-prebuilt" class="pt-tab-pane pt-layout-prebuilt">
 					<?php _e( 'Prebuilt', 'pace-builder' ); ?>
@@ -168,7 +168,7 @@
 						<# } else { #>
 							<#  _.each( data.layouts, function( layout, name ){ #>
 								<div class="pt-pb-layout-item" data-layout="{{{ name }}}"
-								     data-layout-type="{{{ type }}}">
+								     data-layout-type="{{{ data.type }}}">
 									<div class="item-wrap">
 										<h3 class="layout-name">{{{ name }}}</h3>
 
@@ -187,22 +187,19 @@
 <script type="text/template" id="pt-pb-tmpl-page-options-edit">
 	<div class="bbm-modal__topbar">
 		<h2><?php _e( 'Page Options', 'pace-builder' ); ?></h2>
+		<div class="pt-pb-top-bar">
+			<ul class="pt-topbar-tabs clearfix">
+				<li class="tab-active">
+					<a href="#pt-form-design-settings"><?php _e( 'Layout Settings', 'pace-builder' ); ?></a>
+				</li>
+				<li>
+					<a href="#pt-form-typo-settings"><?php _e( 'Typography Settings', 'pace-builder' ); ?></a>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="bbm-modal__section">
-
+	<div class="bbm-modal__section has-tabs">
 		<div class="edit-content-wrap">
-
-			<div class="pt-pb-top-bar">
-				<ul class="pt-topbar-tabs clearfix">
-					<li class="tab-active">
-						<a href="#pt-form-design-settings"><?php _e( 'Layout Settings', 'pace-builder' ); ?></a>
-					</li>
-					<li>
-						<a href="#pt-form-typo-settings"><?php _e( 'Typography Settings', 'pace-builder' ); ?></a>
-					</li>
-				</ul>
-			</div>
-
 			<div id="pt-form-design-settings" class="pt-tab-pane">
 				<?php ptpb_form_field( 'po_layout' ); ?>
 				<?php ptpb_form_field( 'po_fullwidth' ); ?>
@@ -211,10 +208,7 @@
 			<div id="pt-form-typo-settings" class="pt-tab-pane">
 				<?php ptpb_form_fonts(); ?>
 			</div>
-
 		</div>
-
-
 	</div>
 	<div class="bbm-modal__bottombar">
 		<input type="button" class="button button-primary save-row" value="Save"/>
@@ -262,9 +256,6 @@
 	<div id="pt-pb-insert-modules">
 		<div class="bbm-modal__topbar">
 			<h2><?php _e( 'Select Module', 'pace-builder' ); ?></h2>
-		</div>
-		<div class="bbm-modal__section">
-
 			<div class="pt-pb-top-bar">
 				<ul class="pt-topbar-tabs clearfix">
 					<li class="tab-active">
@@ -283,7 +274,8 @@
 					<# }) #>
 				</ul>
 			</div>
-
+		</div>
+		<div class="bbm-modal__section has-tabs">
 			<div id="pt-pb-all-modules" class="pt-tab-pane"></div>
 			<div id="pt-pb-pb-modules" class="pt-tab-pane">
 				<# var modules = new Backbone.Collection( _.map(ptPbOptions.formFields.modules, function(val, key){val.slug = key; return val; }) ); #>
@@ -335,30 +327,26 @@
 <script type="text/template" id="pt-pb-tmpl-icon-picker">
 	<div class="bbm-modal__topbar">
 		<h2><?php _e( 'Select an Icon', 'pace-builder' ); ?></h2>
+		<div class="pt-pb-top-bar">
+			<ul class="pt-topbar-tabs clearfix">
+				<# _.each(ptPbOptions.icons, function(icons, name) { 
+					var slug = ptPbApp.slug(name);
+				#>
+				<li class="tab-active">
+					<a href="#pt-icons-{{{slug}}}">{{{name}}}</a>
+				</li>
+				<# }) #>
+			</ul>
+		</div>
 	</div>
-	<div class="bbm-modal__section">
+	<div class="bbm-modal__section has-tabs">
 
-		<div class="edit-content-wrap">
-			<div class="pt-pb-top-bar">
-				<ul class="pt-topbar-tabs clearfix">
-					<# _.each(ptPbOptions.icons, function(icons, name) { 
-						var slug = ptPbApp.slug(name);
-					#>
-					<li class="tab-active">
-						<a href="#pt-icons-{{{slug}}}">{{{name}}}</a>
-					</li>
-					<# }) #>
-				</ul>
-			</div>
-			
+		<div class="edit-content-wrap">			
 			<# _.each(ptPbOptions.icons, function(icons, name) { 
 						var slug = ptPbApp.slug(name);
 			#>
-			<div id="pt-icons-{{{slug}}}" class="pt-tab-pane">
-
-			</div>
+			<div id="pt-icons-{{{slug}}}" class="pt-tab-pane"></div>
 			<# }) #>
-
 		</div>
 
 	</div>

@@ -366,7 +366,7 @@ class PTPB_Form extends PTPB_Singleton {
 				break;
 
 			case 'textarea':
-				$field_html .= '<textarea name="%1$s">{{{ ptPbApp.htmlEncode(%1$s) }}}</textarea>';
+				$field_html .= '<textarea name="%1$s">{{{ ptPbApp.htmlEncode(data.%1$s) }}}</textarea>';
 				break;
 
 			case 'tinymce':
