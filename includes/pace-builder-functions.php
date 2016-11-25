@@ -404,9 +404,9 @@ if ( ! function_exists( 'ptpb_post_meta' ) ) :
 		echo '<span class="separator">/</span>';
 
 		echo comments_popup_link(
-			__( '<i class="fa fa-comments"></i>No Comments', 'quest' ),
-			__( '<i class="fa fa-comments"></i>1 Comment', 'quest' ),
-			__( '<i class="fa fa-comments"></i>% Comments', 'quest' ) );
+			__( '<i class="fa fa-comments"></i>No Comments', 'pace-builder' ),
+			__( '<i class="fa fa-comments"></i>1 Comment', 'pace-builder' ),
+			__( '<i class="fa fa-comments"></i>% Comments', 'pace-builder' ) );
 
 	}
 endif;
