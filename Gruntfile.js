@@ -6,6 +6,7 @@ module.exports = function (grunt) {
         FILES = [
                     '**',
                     '!node_modules/**',
+                    '!.sass-cache/**',
                     '!**/.{svn,git}/**', // Ignore version control directories.
                     // Ignore unminified versions of external libs we don't ship:
                     '!**tests/**', 
@@ -121,6 +122,13 @@ module.exports = function (grunt) {
                         cwd: SOURCE_DIR,
                         src: FILES,
                         dest: VVV_DIR + '/../wp-vagrant/wordpress/build/wp-content/plugins/pace-builder/'
+                    },
+                    {
+                        dot: true,
+                        expand: true,
+                        cwd: SOURCE_DIR,
+                        src: FILES,
+                        dest: VVV_DIR + '/../../wp-plugins/pace-builder/trunk/'
                     }
                 ]
             }
@@ -248,8 +256,8 @@ module.exports = function (grunt) {
                     ' */\n'
                 },
                 files: {
-                    'assets/css/pacebuilder.min.css': ['assets/css/pacebuilder.css'],
-                    'assets/css/admin.min.css': ['assets/css/pacebuilder-admin.css', 'assets/css/settings.css']
+                    // 'assets/css/pacebuilder.min.css': ['assets/css/pacebuilder.css'],
+                    // 'assets/css/admin.min.css': ['assets/css/pacebuilder-admin.css', 'assets/css/settings.css']
                 }
             }
         },
@@ -265,8 +273,8 @@ module.exports = function (grunt) {
                     ' */\n'
                 },
                 files: {
-                    'assets/plugins/mapsed/mapsed.min.js': ['assets/plugins/mapsed/mapsed.js'],
-                    'assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js': ['assets/plugins/ion-rangeslider/js/ion.rangeSlider.js'],
+                    // 'assets/plugins/mapsed/mapsed.min.js': ['assets/plugins/mapsed/mapsed.js'],
+                    // 'assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js': ['assets/plugins/ion-rangeslider/js/ion.rangeSlider.js'],
                     'assets/js/admin-plugins.min.js': [
                                                         'assets/plugins/timepicker/jquery-ui-timepicker-addon.min.js',
                                                         'assets/plugins/backbone-marionette/backbone.marionette.min.js',
