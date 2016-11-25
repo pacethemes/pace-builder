@@ -67,6 +67,7 @@ html[xmlns] .clearfix {
 }
 .pt-pb-dialog a:focus,
 #pt-pb-stage a:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -223,6 +224,8 @@ html[xmlns] .clearfix {
   background: #fff;
   width: 100%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   border-bottom: 1px solid #e5e5e5;
   z-index: 1000;
@@ -250,6 +253,7 @@ html[xmlns] .clearfix {
   text-decoration: none;
 }
 .pt-pb-add-section a:hover, .pt-pb-add-section a:focus {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -340,6 +344,7 @@ html[xmlns] .clearfix {
   padding: 20px;
   cursor: pointer;
   background-color: #e0e0e0;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .column-layouts .column-layout {
@@ -451,9 +456,11 @@ html[xmlns] .clearfix {
   color: #666;
   padding: 10px 12px;
   border: 1px solid #ddd;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #pt-pb-insert-modules .column-module .module-type h3 {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #pt-pb-insert-modules .column-module .module-type:hover {
@@ -520,6 +527,7 @@ html[xmlns] .clearfix {
   text-decoration: none;
   display: inline-block;
   padding: 4px 8px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -531,6 +539,7 @@ html[xmlns] .clearfix {
   text-decoration: none;
   display: inline-block;
   padding: 3px 6px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   border-width: 1px;
 }
@@ -920,17 +929,18 @@ html[xmlns] .clearfix {
 .pt-pb-btn {
   display: inline-block;
   background-color: #e0e0e0;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 15px;
   margin: 10px 0;
   font-size: 14px;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
   color: #373737;
   display: inline-block;
   padding: 8px 10px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   border-width: 1px;
   -webkit-box-shadow: 0 2px 0 #aaa !important;
@@ -943,10 +953,12 @@ html[xmlns] .clearfix {
 .pt-pb-insert-column {
   background-color: #f5f5f5;
   display: inline-block;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   font-size: 13px;
   text-decoration: none;
   text-align: center;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .pt-pb-insert-column .fa,
@@ -960,6 +972,7 @@ html[xmlns] .clearfix {
   border: 1px solid #ddd;
   border-top: none;
   background-position: center center;
+  -webkit-background-size: cover;
   background-size: cover;
   padding: 20px;
   overflow: hidden;
@@ -1117,6 +1130,7 @@ textarea.regular-text {
   padding: 0 10px;
   margin: 15px 0 0;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 2px dashed #bbb;
 }
@@ -1159,11 +1173,24 @@ textarea.regular-text {
   background-color: #703688;
 }
 
-@keyframes rotateLoader {
+@-webkit-keyframes rotateLoader {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLoader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -1179,12 +1206,17 @@ textarea.regular-text {
 }
 
 .pt-pb-spinner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 60px;
   width: 60px;
   border: 0px solid #3386ba;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
+  -webkit-box-shadow: 0 -20px 0 24px #3386ba inset;
   box-shadow: 0 -20px 0 24px #3386ba inset;
+  -webkit-animation: rotateLoader 1s infinite linear;
   animation: rotateLoader 1s infinite linear;
   position: absolute;
   top: 50%;
@@ -1290,7 +1322,9 @@ textarea.regular-text {
   padding: 15px 40px;
   text-align: right;
   width: 100%;
+  -webkit-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
@@ -1445,6 +1479,7 @@ textarea.regular-text {
 }
 
 .pt-pb-fullscreen .pt-pb-fullscreen-wrap {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: absolute;
   z-index: 9999;
@@ -1470,6 +1505,7 @@ textarea.regular-text {
 #pt-pb-stage {
   border: none;
   background-color: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 #pt-pb-stage h2.hndle {
@@ -1548,6 +1584,7 @@ textarea.regular-text {
   color: #444;
   background: #fff;
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1650,8 +1687,6 @@ textarea.regular-text {
   border: 4px dashed #E0E0E0;
   text-align: center;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .import-upload-ui .drag-upload-area.file-dragover {
@@ -1663,7 +1698,6 @@ textarea.regular-text {
   padding: 2px;
   border: 2px solid #2181b1;
   -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   margin-top: 20px;
 }
@@ -1671,7 +1705,6 @@ textarea.regular-text {
   height: 14px;
   background-color: #358ebe;
   -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 .import-upload-ui .file-browse-button {
@@ -1702,6 +1735,7 @@ textarea.regular-text {
 }
 
 #pt-layout-pane-legacypagebuilder .layout-name {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1729,7 +1763,6 @@ textarea.regular-text {
   background: #F7F7F7;
   border: 1px solid #d0d0d0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .pt-pb-layout-item .item-thumb img {
@@ -1772,6 +1805,8 @@ textarea.regular-text {
   text-align: left;
   margin: 0;
   min-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 1000;
 }
@@ -1806,6 +1841,7 @@ textarea.regular-text {
   background: none;
   padding: 10px;
   margin-bottom: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
 }
 #ptpb_layouts_dialog .pt-pb-layout-item .item-wrap {
@@ -1845,6 +1881,7 @@ textarea.regular-text {
   background: #eeeeee;
   display: inline-block;
   padding: 5px 10px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -1861,6 +1898,7 @@ textarea.regular-text {
   text-align: center;
   border: 1px solid #e5e5e5;
   color: #ccc;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   display: inline-block;
 }
@@ -1972,6 +2010,7 @@ textarea.regular-text {
   font-size: medium;
   background-color: #eee;
   color: #333;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding-left: 5px;
 }
@@ -2055,6 +2094,7 @@ textarea.regular-text {
   color: #333;
   background-color: #fff;
   border: solid 1px #ddd;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -2085,8 +2125,11 @@ input.mapsed-searchbox {
   height: 32px;
   border: 1px solid #fff;
   outline: none;
+  -webkit-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
@@ -2109,6 +2152,7 @@ input.mapsed-searchbox:focus {
 .mapsed-control-button {
   border-color: rgba(0, 0, 0, 0.14902);
   border: solid 1px #888;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.29804) 0px 1px 4px -1px;
@@ -2155,7 +2199,9 @@ button.mapsed-more-button {
   background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
   background-color: #4d90fe;
   border: none;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
@@ -2220,7 +2266,9 @@ button.mapsed-delete-button {
   padding: 5px;
   background: #fff;
   border: solid 1px #ddd;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-shadow: 2px 2px 2px #aaa;
   box-shadow: 2px 2px 2px #aaa;
   min-width: 250px;
   color: #000;
@@ -2268,6 +2316,7 @@ button.mapsed-delete-button {
   font-family: "Calibri", "Arial";
   display: none;
   background: #e74c3c;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
 }
@@ -2284,6 +2333,7 @@ button.mapsed-delete-button {
   font-weight: 300;
   font-size: x-large;
   opacity: 0.8;
+  -webkit-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
 
@@ -2314,6 +2364,7 @@ button.mapsed-delete-button {
   color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   cursor: pointer;
   opacity: 1;
@@ -2787,6 +2838,7 @@ button.mapsed-more-button {
 /* support: IE8 - See #6727 */
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
   filter: inherit;
 }
 
@@ -2934,6 +2986,7 @@ a.ui-button:focus {
 }
 
 .ui-visual-focus {
+  -webkit-box-shadow: 0 0 3px 1px #5e9ed6;
   box-shadow: 0 0 3px 1px #5e9ed6;
 }
 
@@ -3785,6 +3838,7 @@ a.ui-button:active,
 .ui-corner-top,
 .ui-corner-left,
 .ui-corner-tl {
+  -webkit-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 
@@ -3792,6 +3846,7 @@ a.ui-button:active,
 .ui-corner-top,
 .ui-corner-right,
 .ui-corner-tr {
+  -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
 
@@ -3799,6 +3854,7 @@ a.ui-button:active,
 .ui-corner-bottom,
 .ui-corner-left,
 .ui-corner-bl {
+  -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
@@ -3806,6 +3862,7 @@ a.ui-button:active,
 .ui-corner-bottom,
 .ui-corner-right,
 .ui-corner-br {
+  -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
@@ -3827,14 +3884,12 @@ a.ui-button:active,
   padding: 0;
   border: 1px solid #ddd;
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .ui-datepicker * {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .ui-datepicker table {
@@ -3852,7 +3907,6 @@ a.ui-button:active,
   border-color: transparent;
   cursor: pointer;
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .ui-datepicker thead {
