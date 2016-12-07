@@ -1208,6 +1208,10 @@ img {
   border-color: #D90429 !important;
   color: #D90429 !important;
 }
+.ptpb-cf7:not(.theme-none):not(.theme-) .wpcf7-form-control.g-recaptcha {
+  border: none;
+  height: auto;
+}
 .ptpb-cf7:not(.theme-none):not(.theme-) textarea.wpcf7-textarea {
   min-height: 150px;
 }
